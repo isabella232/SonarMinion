@@ -4,7 +4,8 @@ import os
 import simplejson as json
 
 def send_message(message):
-	url = 'http://localhost:9001/analyze'
+	#url = 'http://localhost:9001/analyze'
+	url = 'https://sonar-minion.herokuapp.com/analyze'
 	response = requests.post(url, data=message.strip())
 	return response
 
