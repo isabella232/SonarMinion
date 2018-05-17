@@ -1,0 +1,55 @@
+Hi,
+
+Error:-
+
+2018.03.26 10:41:29 ERROR [o.s.s.c.t.CeWorkerCallableImpl] Failed to execute task AWJi9iibVO8KDhMJpi9y
+org.apache.ibatis.exceptions.PersistenceException: 
+### Error committing transaction.  Cause: org.apache.ibatis.executor.BatchExecutorException: org.sonar.db.issue.IssueMapper.insert (batch index #10) failed. 9 prior sub executor(s) completed successfully, but will be rolled back. Cause: java.sql.BatchUpdateException: ORA-01461: can bind a LONG value only for insert into a LONG column
+
+### Cause: org.apache.ibatis.executor.BatchExecutorException: org.sonar.db.issue.IssueMapper.insert (batch index #10) failed. 9 prior sub executor(s) completed successfully, but will be rolled back. Cause: java.sql.BatchUpdateException: ORA-01461: can bind a LONG value only for insert into a LONG column
+
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.commit(DefaultSqlSession.java:177) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.commit(DefaultSqlSession.java:169) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.sonar.db.DbSession.commit(DbSession.java:41) ~[sonar-db-5.6.5.jar:na]
+	at org.sonar.db.BatchSession.commit(BatchSession.java:168) ~[sonar-db-5.6.5.jar:na]
+	at org.sonar.db.BatchSession.increment(BatchSession.java:205) ~[sonar-db-5.6.5.jar:na]
+	at org.sonar.db.BatchSession.update(BatchSession.java:150) ~[sonar-db-5.6.5.jar:na]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:54) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:52) ~[mybatis-3.2.7.jar:3.2.7]
+	at com.sun.proxy.$Proxy63.updateIfBeforeSelectedDate(Unknown Source) ~[na:na]
+	at org.sonar.server.computation.step.PersistIssuesStep.execute(PersistIssuesStep.java:74) ~[sonar-server-5.6.5.jar:na]
+	at org.sonar.server.computation.step.ComputationStepExecutor.executeSteps(ComputationStepExecutor.java:64) ~[sonar-server-5.6.5.jar:na]
+	at org.sonar.server.computation.step.ComputationStepExecutor.execute(ComputationStepExecutor.java:52) ~[sonar-server-5.6.5.jar:na]
+	at org.sonar.server.computation.taskprocessor.report.ReportTaskProcessor.process(ReportTaskProcessor.java:75) ~[sonar-server-5.6.5.jar:na]
+	at org.sonar.server.computation.taskprocessor.CeWorkerCallableImpl.executeTask(CeWorkerCallableImpl.java:81) [sonar-server-5.6.5.jar:na]
+	at org.sonar.server.computation.taskprocessor.CeWorkerCallableImpl.call(CeWorkerCallableImpl.java:56) [sonar-server-5.6.5.jar:na]
+	at org.sonar.server.computation.taskprocessor.CeWorkerCallableImpl.call(CeWorkerCallableImpl.java:35) [sonar-server-5.6.5.jar:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_71]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) [na:1.8.0_71]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) [na:1.8.0_71]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180) [na:1.8.0_71]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) [na:1.8.0_71]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_71]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_71]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_71]
+Caused by: org.apache.ibatis.executor.BatchExecutorException: org.sonar.db.issue.IssueMapper.insert (batch index #10) failed. 9 prior sub executor(s) completed successfully, but will be rolled back. Cause: java.sql.BatchUpdateException: ORA-01461: can bind a LONG value only for insert into a LONG column
+
+	at org.apache.ibatis.executor.BatchExecutor.doFlushStatements(BatchExecutor.java:127) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.executor.BaseExecutor.flushStatements(BaseExecutor.java:114) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.executor.BaseExecutor.flushStatements(BaseExecutor.java:109) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.executor.BaseExecutor.commit(BaseExecutor.java:201) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.executor.CachingExecutor.commit(CachingExecutor.java:104) ~[mybatis-3.2.7.jar:3.2.7]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.commit(DefaultSqlSession.java:174) ~[mybatis-3.2.7.jar:3.2.7]
+	... 23 common frames omitted
+Caused by: java.sql.BatchUpdateException: ORA-01461: can bind a LONG value only for insert into a LONG column
+
+	at oracle.jdbc.driver.OraclePreparedStatement.executeBatch(OraclePreparedStatement.java:10500) ~[ojdbc6.jar:11.2.0.4.0]
+	at oracle.jdbc.driver.OracleStatementWrapper.executeBatch(OracleStatementWrapper.java:230) ~[ojdbc6.jar:11.2.0.4.0]
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.commons.dbcp.DelegatingStatement.executeBatch(DelegatingStatement.java:297) ~[commons-dbcp-1.4.jar:1.4]
+	at org.apache.ibatis.executor.BatchExecutor.doFlushStatements(BatchExecutor.java:103) ~[mybatis-3.2.7.jar:3.2.7]
+	... 28 common frames omitted
+2018.03.26 10:41:29 ERROR [o.s.s.c.t.CeWorkerCallableImpl] Executed task | project=myATTMobile:18298 | type=REPORT | id=AWJi9iibVO8KDhMJpi9y | submitter=OSDAdmin | time=167394ms
+Thanks,
+Jitesh

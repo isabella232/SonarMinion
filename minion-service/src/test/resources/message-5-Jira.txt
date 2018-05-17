@@ -1,0 +1,20 @@
+Hello,
+
+we experienced a OutOfMemory error in some of our analyses tonight:
+
+Error Details: aa-versorger [Project Analysis]
+Error Details
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.lang.reflect.Array.newInstance(Array.java:75)
+	at oracle.jdbc.driver.BufferCache.get(BufferCache.java:231)
+.....
+The builds over the last days were fine and had no such issues.
+Our settings for the ComputeEngine are:
+
+sonar.ce.javaOpts=-Xmx1024m -Xms128m -XX:+HeapDumpOnOutOfMemoryError -Djava.net.preferIPv4Stack=true
+It is easy to make them higher, however I would like to ask if it is recommended or some steps had to be taken before that?
+
+Another thing happened with our nightly builds (perhaps it is related?). The analyses projects took much more time than usual. I have attached a file samCE.log which shows the analyses for one of our biggest projects. The usual analysis time is ~300.000ms, however this night it took ~2.264.000 ms until the analysis was finished.
+
+Regards
+David
