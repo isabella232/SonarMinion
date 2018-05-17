@@ -6,14 +6,38 @@
 package org.sonarsource.minion;
 
 
-import org.assertj.core.api.Assertions;
+import com.google.gson.Gson;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.util.stream.Collectors;
 import org.junit.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class AnalyzerTest {
 
   @Test
   public void test_returned_message() {
-    String result = new Analyzer().analyze("foo");
-    Assertions.assertThat(result).isEqualTo("message analyzed : foo");
+    String result = new Analyzer().analyze("{description:\"foo\"}");
+    assertThat(result).isEqualTo("message analyzed : foo");
+  }
+
+  @Test
+  public void test_versions() throws IOException {
+    String[][] expected = new String[][]{
+      {"6.7.1", "5.6"},
+      {},
+      {"2.0.0", "41.4657263", "5.9.0.1001", "41.3511383", "5.6"},
+      {"300.000", "2.264.000"}
+    };
+
+    for (int i = 1; i <= 4; i++) {
+      File file = new File("src/test/resources/message-" + i + "-Jira.txt");
+      String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
+      Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+      assertThat(new Analyzer().analyze(content)).isEqualTo("message analyzed : "+message.description);
+      assertThat(new Analyzer().getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
+    }
   }
 }
