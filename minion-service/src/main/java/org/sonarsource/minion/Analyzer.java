@@ -6,6 +6,7 @@
 package org.sonarsource.minion;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -17,6 +18,7 @@ import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import javax.annotation.CheckForNull;
 
 public class Analyzer {
   private static final Pattern VERSION_REGEX = Pattern.compile("\\d+\\.\\d+(\\.\\d+)*");
@@ -39,7 +41,11 @@ public class Analyzer {
   }
 
   public String analyze(String json) {
-    Message message = new Gson().fromJson(json, Message.class);
+    Gson gson = new GsonBuilder().disableHtmlEscaping().create();
+    Message message = gson.fromJson(json, Message.class);
+    if (message == null) {
+      throw new IllegalArgumentException("Invalid json message");
+    }
     Set<String> versions = new HashSet<>();
     Set<String> products = new HashSet<>();
     if (message.component_version == null || message.component_version.isEmpty()) {
@@ -94,6 +100,7 @@ public class Analyzer {
     return res;
   }
 
+  @CheckForNull
   String getVersion(String product, Collection<String> versions) {
     List<String> knownVersions = new ArrayList<>(updateCenter.findSortedVersions(product));
     Collections.reverse(knownVersions);
@@ -104,8 +111,8 @@ public class Analyzer {
 
   private Map<String, String> getVersionsByProduct(Set<String> products, Set<String> versions) {
     return products.stream()
-      .collect(Collectors
-        .toMap(Function.identity(), p -> getVersion(p, versions)));
+      .filter(p -> getVersion(p, versions) != null)
+      .collect(Collectors.toMap(Function.identity(), p -> getVersion(p, versions)));
   }
 
 }
