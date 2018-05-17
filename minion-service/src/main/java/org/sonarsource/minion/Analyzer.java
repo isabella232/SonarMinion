@@ -13,15 +13,18 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import javax.annotation.CheckForNull;
 
 public class Analyzer {
   private static final Pattern VERSION_REGEX = Pattern.compile("\\d+\\.\\d+(\\.\\d+)*");
+  private static final Pattern STACK_REGEX= Pattern.compile("(^\\d+\\) .+)|(^.+Exception: .+)|(^\\s+at .+)|(^\\s+... \\d+ more)|(^\\s*Caused by:.+)", Pattern.MULTILINE);
   private final Qualifier qualifier;
 
   private UpdateCenter updateCenter = new UpdateCenter();
@@ -68,11 +71,11 @@ public class Analyzer {
     }
 
     Map<String, String> productsVersions = getVersionsByProduct(products, versions);
-    Set<String> errorMessages = getErrorMessages(message.description);
+    List<String> errorMessages = getErrorMessages(message.description);
     if (errorMessages.isEmpty()) {
       return "We didn't understand the error, could you please describe the error ?";
     }
-    return qualifier.qualify(errorMessages, productsVersions);
+    return qualifier.qualify(new HashSet<>(errorMessages), productsVersions);
   }
 
   Set<String> getVersions(String message) {
@@ -91,20 +94,23 @@ public class Analyzer {
       .collect(Collectors.toSet());
   }
 
-  Set<String> getErrorMessages(String message) {
-    Set<String> res = new HashSet<>();
-    int index = message.indexOf("Caused by:");
-
-    while (index > 0) {
-      int at = message.indexOf("at ", index);
-      if (at < 0) {
-        break;
-      }
-      res.add(message.substring(index, at + 3));
-      index = message.indexOf("Caused by:", at);
+  List<String> getErrorMessages(String message) {
+    List<String> res = new ArrayList<>();
+    Matcher matcher = STACK_REGEX.matcher(message);
+    while (matcher.find()) {
+      res.add(matcher.group());
     }
-
-    return res;
+    return IntStream.range(0, res.size())
+      .filter(i -> res.get(i).matches("(^.+Exception: .+)|(^\\s*Caused by:.+)"))
+      .mapToObj(i -> {
+        int next = i + 1;
+        String line = null;
+        while (next < res.size() && (line == null || !line.contains("sonar"))) {
+          line = res.get(next);
+          next++;
+        }
+        return line;
+      }).filter(Objects::nonNull).collect(Collectors.toList());
   }
 
   @CheckForNull
