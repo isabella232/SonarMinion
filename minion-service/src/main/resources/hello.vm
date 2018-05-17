@@ -1,0 +1,17 @@
+<html>
+    <center>
+        <img src=img/minion.img width="400"></img>
+        <h3>Oh hey there. Got a problem with SonarSource products ? Let me know a bit more, and I'll do my best to help</h3>
+        <form action="/analyze" method="post">
+          Which component ?<br>
+          <input id="component" name="component" type="text" value="SonarQube"><br>
+
+          Which version of that component ?<br>
+          <input id="component_version" name="component_version" value="v7.1"><br>
+
+          Any specific error or stacktrace ?<br>
+          <textarea name="description" id="description" rows="20" cols="120">Paste your stacktrace here</textarea><br>
+          <button type="submit">Can you find something dear minion ?</button>
+        </form>
+    </center>
+</html>

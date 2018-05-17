@@ -38,11 +38,26 @@ public class Analyzer {
     String description;
     String component;
     String component_version;
+
+    public Message(String description, String component, String component_version) {
+      this.description = description;
+      this.component = component;
+      this.component_version = component_version;
+    }
   }
+
 
   public String analyze(String json) {
     Gson gson = new GsonBuilder().create();
     Message message = gson.fromJson(json, Message.class);
+    return this.process(message);
+  }
+
+  public String analyze(String description, String component, String component_version) {
+    return this.process(new Message(description, component, component_version));
+  }
+
+  public String process(Message message) {
     if (message == null) {
       throw new IllegalArgumentException("Invalid json message");
     }
@@ -50,7 +65,7 @@ public class Analyzer {
     if (message.component_version == null || message.component_version.isEmpty()) {
       versions = getVersions(message.description);
       if (versions.isEmpty()) {
-        return "There seems to be no product nor version in your question, could you precise those information ?";
+        return "Seems like there isno product nor version in your question, could you clarify this information ?";
       }
     } else {
       versions.add(message.component_version);
@@ -63,7 +78,7 @@ public class Analyzer {
       products = getProducts(message.component);
     }
     if (products.isEmpty()) {
-      return "Could you precise which component of the SonarQube ecosystem your question is about ?";
+      return "Could you specify which component of the SonarQube ecosystem your question is about ?";
     }
 
     Map<String, String> productsVersions = getVersionsByProduct(products, versions);
