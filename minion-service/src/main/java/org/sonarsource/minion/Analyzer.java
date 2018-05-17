@@ -27,7 +27,7 @@ public class Analyzer {
   private static final Pattern STACK_REGEX= Pattern.compile("(^\\d+\\) .+)|(^.+Exception: .+)|(^\\s+at .+)|(^\\s+... \\d+ more)|(^\\s*Caused by:.+)", Pattern.MULTILINE);
   private final Qualifier qualifier;
 
-  private UpdateCenter updateCenter = new UpdateCenter();
+  private InputConnector inputConnector;
 
   public Analyzer(Qualifier qualifier, InputConnector inputConnector) {
     this.qualifier = qualifier;
@@ -84,7 +84,7 @@ public class Analyzer {
   }
 
   Set<String> getProducts(String message) {
-    Collection<String> knownProducts = updateCenter.findProducts();
+    Collection<String> knownProducts = inputConnector.findProducts();
     return knownProducts.stream()
       .filter(message::contains)
       .collect(Collectors.toSet());
@@ -112,7 +112,7 @@ public class Analyzer {
 
   @CheckForNull
   String getVersion(String product, Collection<String> versions) {
-    List<String> knownVersions = new ArrayList<>(updateCenter.findSortedVersions(product));
+    List<String> knownVersions = new ArrayList<>(inputConnector.findSortedVersions(product));
     Collections.reverse(knownVersions);
     return knownVersions.stream()
       .filter(versions::contains)
