@@ -10,6 +10,7 @@ import com.google.gson.JsonSyntaxException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static spark.Spark.exception;
 import static spark.Spark.port;
 import static spark.Spark.post;
 
@@ -27,7 +28,20 @@ public class WebServer {
 
     post("/analyze", (request, response) -> {
       String message = request.body();
+      if (message == null || message.trim().isEmpty()) {
+        throw new IllegalArgumentException("Body should not be empty");
+      }
       return analyzer.analyze(message);
+    });
+
+    exception(IllegalArgumentException.class, (e, req, res) -> {
+      res.status(400);
+      res.body(e.getMessage());
+    });
+
+    exception(JsonSyntaxException.class, (e, req, res) -> {
+      res.status(400);
+      res.body(e.getMessage());
     });
   }
 
