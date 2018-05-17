@@ -156,6 +156,16 @@ public class AnalyzerTest {
     softly.assertAll();
   }
 
+  @Test
+  public void test_sd_input1_with_jira_request() throws IOException {
+    File file = new File("src/test/resources/servicedesk/input1.json");
+    Analyzer analyzer = new Analyzer(new Qualifier(), new JiraInputConnector());
+
+    String message = analyzer.analyze(getContent(file));
+
+    assertThat(message).contains("SONAR-9384");
+  }
+
   private static final class FakeQualifier extends Qualifier {
     @Override
     public String qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
