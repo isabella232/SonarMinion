@@ -10,9 +10,13 @@ import com.google.gson.Gson;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+import org.assertj.core.api.SoftAssertions;
 import org.junit.Test;
 
 import static java.util.Arrays.asList;
@@ -103,15 +107,19 @@ public class AnalyzerTest {
 
   private static Analyzer.Message getMessage(String pathname) throws IOException {
     File file = new File(pathname);
-    String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
+    String content = getContent(file);
     return GSON.fromJson(content, Analyzer.Message.class);
+  }
+
+  private static String getContent(File file) throws IOException {
+    return Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
   }
 
   @Test
   public void errorMessage() throws IOException {
     String[][] expected = new String[][]{
       {"	at org.sonar.server.computation.task.projectanalysis.component.VisitException.rethrowOrWrap(VisitException.java:44)",
-        "	at org.sonar.server.computation.task.projectanalysis.measure.MapBasedRawMeasureRepository.add(MapBasedRawMeasureRepository.java:85)"},
+        "	at org.sonar.server.computation.task.projectanalysis.measure.MeasureRepositoryImpl.add(MeasureRepositoryImpl.java:124)"},
       {},
       {},
       {},
@@ -132,5 +140,22 @@ public class AnalyzerTest {
     assertThat(analyzer.getVersion("SonarCOBOL", asList("4.0.2", "4.2"))).isEqualTo("4.2");
     assertThat(analyzer.getVersion("SonarCOBOL", singletonList("3.9"))).isNull();
     assertThat(analyzer.getVersion("unknown", singletonList("3.9"))).isNull();
+  }
+
+  @Test
+  public void test_get_errors_with_jira_request() throws IOException {
+    SoftAssertions softly = new SoftAssertions();
+    for (File file : new File("src/test/resources/stacktraces").listFiles()) {
+      List<String> errorMessages = analyzer.getErrorMessages(getContent(file));
+      String resp = new Qualifier().qualify(new HashSet<>(errorMessages), new HashMap<>());
+      String expected = file.getName();
+      if ("SONAR-10536.txt".equals(expected)) {
+        // not supported yet : stack trace is rather incomplete
+        continue;
+      }
+      expected = expected.substring(0, expected.length() - 4);
+      softly.assertThat(resp).contains(expected);
+    }
+    softly.assertAll();
   }
 }

@@ -101,7 +101,8 @@ public class Analyzer {
       res.add(matcher.group());
     }
     return IntStream.range(0, res.size())
-      .filter(i -> res.get(i).matches("(^.+Exception: .+)|(^\\s*Caused by:.+)"))
+      // keep the first element in case we dd
+      .filter(i -> i==0 || res.get(i).matches("(^.+Exception: .+)|(^\\s*Caused by:.+)"))
       .mapToObj(i -> {
         int next = i + 1;
         String line = null;

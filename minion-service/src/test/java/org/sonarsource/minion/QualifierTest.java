@@ -24,7 +24,6 @@ public class QualifierTest {
     List<String> strings = Arrays.asList("	at org.sonar.server.computation.task.projectanalysis.component.VisitException.rethrowOrWrap(VisitException.java:44)",
       "	at org.sonar.server.computation.task.projectanalysis.measure.MapBasedRawMeasureRepository.add(MapBasedRawMeasureRepository.java:85)");
     response = new Qualifier().qualify(new HashSet<>(strings), new HashMap<>());
-    System.out.println(response);
     assertThat(response).contains("SONAR-9384");
   }
 }
