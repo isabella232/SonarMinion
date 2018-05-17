@@ -13,6 +13,8 @@ import org.slf4j.LoggerFactory;
 import static spark.Spark.exception;
 import static spark.Spark.port;
 import static spark.Spark.post;
+import static spark.Spark.redirect;
+import static spark.Spark.staticFiles;
 
 public class WebServer {
 
@@ -25,6 +27,10 @@ public class WebServer {
   public void start(int port) {
     port(port);
     LOGGER.info("Listening on port {}", port);
+
+    staticFiles.location("img");
+
+    redirect.get("*", "/minion.png");
 
     post("/analyze", (request, response) -> {
       String message = request.body();
