@@ -33,14 +33,14 @@ public class AnalyzerTest {
   @Test
   public void test_returned_message() {
     String answer = analyzer.analyze("{description:\"foo\"}");
-    assertThat(answer).isEqualTo("There seems to be no product nor version in your question, could you precise those information ?");
+    assertThat(answer).isEqualTo("Seems like there isno product nor version in your question, could you clarify this information ?");
 
     // version in message
     answer = analyzer.analyze("{description:\"foo 6.2\"}");
-    assertThat(answer).isEqualTo("Could you precise which component of the SonarQube ecosystem your question is about ?");
+    assertThat(answer).isEqualTo("Could you specify which component of the SonarQube ecosystem your question is about ?");
 
     answer = analyzer.analyze("{description:\"foo 6.2\", component:\"plop\"}");
-    assertThat(answer).isEqualTo("Could you precise which component of the SonarQube ecosystem your question is about ?");
+    assertThat(answer).isEqualTo("Could you specify which component of the SonarQube ecosystem your question is about ?");
   }
 
   @Test
