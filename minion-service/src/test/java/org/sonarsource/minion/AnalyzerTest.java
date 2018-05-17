@@ -10,6 +10,8 @@ import com.google.gson.Gson;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 import org.junit.Test;
 
@@ -20,10 +22,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class AnalyzerTest {
 
   private static final Gson GSON = new Gson();
+  private Analyzer analyzer = new Analyzer(new Qualifier() {
+    @Override
+    public String qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
+      return "Your question seems related to SONAR-42";
+    }
+  });
 
   @Test
   public void test_returned_message() {
-    Analyzer analyzer = new Analyzer();
     String answer = analyzer.analyze("{description:\"foo\"}");
     assertThat(answer).isEqualTo("There seems to be no product nor version in your question, could you precise those information ?");
 
@@ -42,7 +49,6 @@ public class AnalyzerTest {
       {"47.4448709", "51.6451219"},
     };
 
-    Analyzer analyzer = new Analyzer();
       for (int i = 1; i <= 2; i++) {
         Analyzer.Message message = getMessage("src/test/resources/google_groups/input" + i + ".json");
         assertThat(analyzer.getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
@@ -58,7 +64,6 @@ public class AnalyzerTest {
             {"300.000", "2.264.000"}
     };
 
-    Analyzer analyzer = new Analyzer();
       for (int i = 1; i <= 4; i++) {
         Analyzer.Message message = getMessage("src/test/resources/servicedesk/input" + i + ".json");
         assertThat(analyzer.getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
@@ -122,8 +127,6 @@ public class AnalyzerTest {
 
   @Test
   public void test_get_version() {
-    Analyzer analyzer = new Analyzer();
-
     assertThat(analyzer.getVersion("SonarCOBOL", asList("3.9", "4.2"))).isEqualTo("4.2");
     assertThat(analyzer.getVersion("SonarCOBOL", asList("4.0.2", "4.2"))).isEqualTo("4.2");
     assertThat(analyzer.getVersion("SonarCOBOL", singletonList("3.9"))).isNull();

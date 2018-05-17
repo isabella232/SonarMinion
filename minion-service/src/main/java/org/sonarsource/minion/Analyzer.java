@@ -20,8 +20,17 @@ import java.util.stream.Collectors;
 
 public class Analyzer {
   private static final Pattern VERSION_REGEX = Pattern.compile("\\d+\\.\\d+(\\.\\d+)*");
+  private final Qualifier qualifier;
 
   private UpdateCenter updateCenter = new UpdateCenter();
+
+  Analyzer() {
+    this.qualifier = new Qualifier();
+  }
+
+  Analyzer(Qualifier qualifier) {
+    this.qualifier = qualifier;
+  }
 
   public static class Message {
     String description;
@@ -50,7 +59,7 @@ public class Analyzer {
       products = getProducts(message.component);
     }
     Map<String, String> productsVersions = getVersionsByProduct(products, versions);
-    return new Qualifier().qualify(getErrorMessages(message.description), productsVersions);
+    return qualifier.qualify(getErrorMessages(message.description), productsVersions);
   }
 
   Set<String> getVersions(String message) {
