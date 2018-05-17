@@ -22,7 +22,9 @@ public class Qualifier {
 
   private static final String JIRA_URL = "https://jira.sonarsource.com";
 
-  public String qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
+  private final JiraRestClient client;
+
+  public Qualifier() {
     JiraRestClientFactory factory = new AsynchronousJiraRestClientFactory();
     URI uri = null;
     try {
@@ -30,8 +32,10 @@ public class Qualifier {
     } catch (URISyntaxException e) {
       throw new IllegalStateException("Jira from sonarsource not found !?");
     }
-    JiraRestClient client = factory.create(uri, new AnonymousAuthenticationHandler());
+    this.client = factory.create(uri, new AnonymousAuthenticationHandler());
+  }
 
+  public String qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
     String jql = errorMessage.stream().map(e -> "text ~\"" + e.replace("\t", "\\t") + "\"").collect(Collectors.joining(" OR "));
     Promise<SearchResult> searchResultPromise = client.getSearchClient().searchJql(jql);
     SearchResult sr = searchResultPromise.claim();

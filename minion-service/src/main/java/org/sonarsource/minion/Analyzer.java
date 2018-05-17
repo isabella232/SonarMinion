@@ -29,12 +29,9 @@ public class Analyzer {
 
   private UpdateCenter updateCenter = new UpdateCenter();
 
-  Analyzer() {
-    this.qualifier = new Qualifier();
-  }
-
-  Analyzer(Qualifier qualifier) {
+  public Analyzer(Qualifier qualifier, InputConnector inputConnector) {
     this.qualifier = qualifier;
+    this.inputConnector = inputConnector;
   }
 
   public static class Message {
@@ -44,13 +41,12 @@ public class Analyzer {
   }
 
   public String analyze(String json) {
-    Gson gson = new GsonBuilder().disableHtmlEscaping().create();
+    Gson gson = new GsonBuilder().create();
     Message message = gson.fromJson(json, Message.class);
     if (message == null) {
       throw new IllegalArgumentException("Invalid json message");
     }
     Set<String> versions = new HashSet<>();
-
     if (message.component_version == null || message.component_version.isEmpty()) {
       versions = getVersions(message.description);
       if (versions.isEmpty()) {

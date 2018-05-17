@@ -22,7 +22,9 @@ public class WebServer {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(WebServer.class);
 
-  private final Analyzer analyzer = new Analyzer();
+  private final JiraInputConnector jiraInputConnector = new JiraInputConnector();
+  private final Qualifier qualifier = new Qualifier();
+  private final Analyzer analyzer = new Analyzer(qualifier, jiraInputConnector);
 
   public void start(int port) {
     port(port);
