@@ -16,6 +16,8 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AnalyzerTest {
+  String[] DATASOURCES = new String[]{"google_groups", "servicedesk"};
+
 
   @Test
   public void test_returned_message() {
@@ -32,37 +34,71 @@ public class AnalyzerTest {
   }
 
   @Test
-  public void test_versions() throws IOException {
+  public void test_gg_versions() throws IOException {
     String[][] expected = new String[][]{
-      {"6.7.1", "5.6"},
-      {},
-      {"2.0.0", "41.4657263", "5.9.0.1001", "41.3511383", "5.6"},
-      {"300.000", "2.264.000"}
+      {"7.0","7.1","0.0.0.0", "2018.05.03"},
+      {"47.4448709", "51.6451219"},
     };
 
     Analyzer analyzer = new Analyzer();
-    for (int i = 1; i <= 4; i++) {
-      File file = new File("src/test/resources/message-" + i + "-Jira.txt");
-      String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
-      Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
-      assertThat(analyzer.getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
-    }
+      for (int i = 1; i <= 2; i++) {
+        File file = new File("src/test/resources/google_groups/input" + i + ".json");
+        String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
+        Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+        assertThat(analyzer.getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
+      }
   }
 
   @Test
-  public void test_products() throws IOException {
+  public void test_sd_versions() throws IOException {
     String[][] expected = new String[][]{
-      {"SonarQube"},
+            {"6.7.1", "5.6"},
+            {},
+            {"2.0.0", "41.4657263", "5.9.0.1001", "41.3511383", "5.6"},
+            {"300.000", "2.264.000"}
+    };
+
+    Analyzer analyzer = new Analyzer();
+      for (int i = 1; i <= 4; i++) {
+        File file = new File("src/test/resources/servicedesk/input" + i + ".json");
+        String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
+        Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+        assertThat(analyzer.getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
+      }
+  }
+
+
+  @Test
+  public void test_gg_products() throws IOException {
+    String[][] expected = new String[][]{
       {},
       {"SonarQube"},
+      {},
       {}
     };
 
+    for (int i = 1; i <= 2; i++) {
+        File file = new File("src/test/resources/google_groups/input" + i + ".json");
+        String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
+        Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+        assertThat(new Analyzer().getProducts(message.description)).containsExactlyInAnyOrder(expected[i - 1]);
+      }
+  }
+
+  @Test
+  public void test_sd_products() throws IOException {
+    String[][] expected = new String[][]{
+            {"SonarQube"},
+            {},
+            {"SonarQube"},
+            {}
+    };
+
     for (int i = 1; i <= 4; i++) {
-      File file = new File("src/test/resources/message-" + i + "-Jira.txt");
-      String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
-      Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
-      assertThat(new Analyzer().getProducts(message.description)).containsExactlyInAnyOrder(expected[i-1]);
+        File file = new File("src/test/resources/servicedesk/input" + i + ".json");
+        String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
+        Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+        assertThat(new Analyzer().getProducts(message.description)).containsExactlyInAnyOrder(expected[i - 1]);
     }
   }
 }
