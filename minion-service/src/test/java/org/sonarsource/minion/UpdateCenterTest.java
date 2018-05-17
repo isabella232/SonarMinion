@@ -1,9 +1,8 @@
 /*
- * Copyright (C) 2017-2018 SonarSource SA
+ * Copyright (C) 2018-2018 SonarSource SA
  * All rights reserved
  * mailto:info AT sonarsource DOT com
  */
-
 package org.sonarsource.minion;
 
 import org.junit.Test;
