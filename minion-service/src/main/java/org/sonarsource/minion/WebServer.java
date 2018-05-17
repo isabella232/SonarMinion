@@ -6,6 +6,7 @@
 
 package org.sonarsource.minion;
 
+import com.google.gson.JsonSyntaxException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,7 +32,7 @@ public class WebServer {
   }
 
   public static void main(String[] args) {
-    if (args.length > 0){
+    if (args.length > 0) {
       String port = args[0];
       new WebServer().start(Integer.parseInt(port));
       return;
