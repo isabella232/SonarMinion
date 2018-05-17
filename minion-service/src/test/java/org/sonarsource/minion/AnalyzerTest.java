@@ -17,6 +17,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class AnalyzerTest {
 
+  private static final Gson GSON = new Gson();
+
   @Test
   public void test_returned_message() {
     Analyzer analyzer = new Analyzer();
@@ -40,9 +42,7 @@ public class AnalyzerTest {
 
     Analyzer analyzer = new Analyzer();
       for (int i = 1; i <= 2; i++) {
-        File file = new File("src/test/resources/google_groups/input" + i + ".json");
-        String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
-        Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+        Analyzer.Message message = getMessage("src/test/resources/google_groups/input" + i + ".json");
         assertThat(analyzer.getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
       }
   }
@@ -58,9 +58,7 @@ public class AnalyzerTest {
 
     Analyzer analyzer = new Analyzer();
       for (int i = 1; i <= 4; i++) {
-        File file = new File("src/test/resources/servicedesk/input" + i + ".json");
-        String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
-        Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+        Analyzer.Message message = getMessage("src/test/resources/servicedesk/input" + i + ".json");
         assertThat(analyzer.getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
       }
   }
@@ -76,9 +74,7 @@ public class AnalyzerTest {
     };
 
     for (int i = 1; i <= 2; i++) {
-        File file = new File("src/test/resources/google_groups/input" + i + ".json");
-        String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
-        Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+        Analyzer.Message message = getMessage("src/test/resources/google_groups/input" + i + ".json");
         assertThat(new Analyzer().getProducts(message.description)).containsExactlyInAnyOrder(expected[i - 1]);
       }
   }
@@ -93,11 +89,15 @@ public class AnalyzerTest {
     };
 
     for (int i = 1; i <= 4; i++) {
-        File file = new File("src/test/resources/servicedesk/input" + i + ".json");
-        String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
-        Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
-        assertThat(new Analyzer().getProducts(message.description)).containsExactlyInAnyOrder(expected[i - 1]);
+      Analyzer.Message message = getMessage("src/test/resources/servicedesk/input" + i + ".json");
+      assertThat(new Analyzer().getProducts(message.description)).containsExactlyInAnyOrder(expected[i - 1]);
     }
+  }
+
+  private static Analyzer.Message getMessage(String pathname) throws IOException {
+    File file = new File(pathname);
+    String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
+    return GSON.fromJson(content, Analyzer.Message.class);
   }
 
   @Test
@@ -113,9 +113,7 @@ public class AnalyzerTest {
       {}
     };
     for (int i = 1; i <= 8; i++) {
-      File file = new File("src/test/resources/servicedesk/input" + i + ".json");
-      String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
-      Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+      Analyzer.Message message = getMessage("src/test/resources/servicedesk/input" + i + ".json");
       assertThat(new Analyzer().getErrorMessages(message.description)).containsExactlyInAnyOrder(expected[i-1]);
     }
   }
