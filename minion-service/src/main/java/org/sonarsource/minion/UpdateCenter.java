@@ -27,6 +27,7 @@ public class UpdateCenter {
       .collect(Collectors.toSet());
     this.pluginNames = pluginKeys.stream().map(pluginKey -> updateCenterProperties.getProperty(pluginKey + ".name"))
       .collect(Collectors.toSet());
+    this.pluginNames.add("SonarQube");
   }
 
   private Properties loadFile() {

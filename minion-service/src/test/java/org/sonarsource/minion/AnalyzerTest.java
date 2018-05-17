@@ -48,4 +48,21 @@ public class AnalyzerTest {
       assertThat(analyzer.getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
     }
   }
+
+  @Test
+  public void test_products() throws IOException {
+    String[][] expected = new String[][]{
+      {"SonarQube"},
+      {},
+      {"SonarQube"},
+      {}
+    };
+
+    for (int i = 1; i <= 4; i++) {
+      File file = new File("src/test/resources/message-" + i + "-Jira.txt");
+      String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
+      Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+      assertThat(new Analyzer().getProducts(message.description)).containsExactlyInAnyOrder(expected[i-1]);
+    }
+  }
 }

@@ -6,6 +6,7 @@
 package org.sonarsource.minion;
 
 import com.google.gson.Gson;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Matcher;
@@ -43,5 +44,13 @@ public class Analyzer {
       res.add(matcher.group());
     }
     return res;
+  }
+
+  Set<String> getProducts(String message) {
+    UpdateCenter updateCenter = new UpdateCenter();
+    Collection<String> knownProducts = updateCenter.findProducts();
+    return knownProducts.stream()
+      .filter(message::contains)
+      .collect(Collectors.toSet());
   }
 }
