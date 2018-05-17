@@ -39,7 +39,7 @@ public class AnalyzerTest {
     assertThat(answer).isEqualTo("Could you precise which component of the SonarQube ecosystem your question is about ?");
 
     answer = analyzer.analyze("{description:\"foo 6.2\", component:\"plop\"}");
-    assertThat(answer).isEqualTo("Your question seems related to SONAR-42");
+    assertThat(answer).isEqualTo("Could you precise which component of the SonarQube ecosystem your question is about ?");
   }
 
   @Test

@@ -32,17 +32,21 @@ public class Qualifier {
     }
     JiraRestClient client = factory.create(uri, new AnonymousAuthenticationHandler());
 
-    String jql = errorMessage.stream().map(e -> "text ~\"" + e.replace("\t","\\t") + "\"").collect(Collectors.joining(" OR "));
+    String jql = errorMessage.stream().map(e -> "text ~\"" + e.replace("\t", "\\t") + "\"").collect(Collectors.joining(" OR "));
     Promise<SearchResult> searchResultPromise = client.getSearchClient().searchJql(jql);
     SearchResult sr = searchResultPromise.claim();
     StringBuilder result = new StringBuilder();
     for (BasicIssue basicIssue : sr.getIssues()) {
       result.append(basicIssue.getKey()).append(", ");
     }
-    if(result.length() == 0) {
+    if (result.length() == 0) {
       return "Your question seems related to SONAR-42";
     }
-    return result.toString();
 
+    result.append("\n");
+    result.append("Products found : " + productsVersions.entrySet().stream().map(entry -> entry.getKey() + " - " + entry.getValue()).collect(Collectors.joining(",")));
+    result.append("\n");
+    result.append("Errors found : " + errorMessage.stream().collect(Collectors.joining(",")));
+    return result.toString();
   }
 }

@@ -47,7 +47,7 @@ public class Analyzer {
       throw new IllegalArgumentException("Invalid json message");
     }
     Set<String> versions = new HashSet<>();
-    Set<String> products = new HashSet<>();
+
     if (message.component_version == null || message.component_version.isEmpty()) {
       versions = getVersions(message.description);
       if (versions.isEmpty()) {
@@ -56,16 +56,23 @@ public class Analyzer {
     } else {
       versions.add(message.component_version);
     }
+
+    Set<String> products = new HashSet<>();
     if (message.component == null || message.component.isEmpty()) {
       products = getProducts(message.description);
-      if (products.isEmpty()) {
-        return "Could you precise which component of the SonarQube ecosystem your question is about ?";
-      }
     } else {
       products = getProducts(message.component);
     }
+    if (products.isEmpty()) {
+      return "Could you precise which component of the SonarQube ecosystem your question is about ?";
+    }
+
     Map<String, String> productsVersions = getVersionsByProduct(products, versions);
-    return qualifier.qualify(getErrorMessages(message.description), productsVersions);
+    Set<String> errorMessages = getErrorMessages(message.description);
+    if (errorMessages.isEmpty()) {
+      return "We didn't understand the error, could you please describe the error ?";
+    }
+    return qualifier.qualify(errorMessages, productsVersions);
   }
 
   Set<String> getVersions(String message) {
