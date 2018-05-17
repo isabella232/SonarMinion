@@ -1,0 +1,1 @@
+[ERROR] Failed to execute goal org.sonarsource.scanner.maven:sonar-maven-plugin:3.4.0.905:sonar (default-cli) on project P: Component 'M' is not a project, The project 'M' is already defined in SonarQube but as a module of project 'P'. If you really want to stop directly analysing project 'P', please first delete it from SonarQube and then relaunch the analysis of project 'M'.

@@ -1,0 +1,6 @@
+Caused by: java.lang.ClassCastException: jdk.nashorn.api.scripting.ScriptObjectMirror cannot be cast to jdk.nashorn.api.scripting.JSObject
+        at org.sonarsource.analyzer.commons.JsonParser.<init>(JsonParser.java:36)
+        at org.sonarsource.analyzer.commons.ProfileDefinitionReader.loadActiveKeysFromJsonProfile(ProfileDefinitionReader.java:59)
+        at org.sonarsource.analyzer.commons.RuleMetadataLoader.<init>(RuleMetadataLoader.java:60)
+        at org.sonar.plugins.python.PythonRuleRepository.getRuleMetadataLoader(PythonRuleRepository.java:56)
+        at org.sonar.plugins.python.PythonRuleRepository.define(PythonRuleRepository.java:46)
