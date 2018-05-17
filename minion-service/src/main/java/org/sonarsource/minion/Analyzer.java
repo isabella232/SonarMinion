@@ -53,4 +53,20 @@ public class Analyzer {
       .filter(message::contains)
       .collect(Collectors.toSet());
   }
+
+  Set<String> getErrorMessages(String message) {
+    Set<String> res = new HashSet<>();
+    int index = message.indexOf("Caused by:");
+
+    while (index > 0) {
+      int at = message.indexOf("at ", index);
+      if(at < 0) {
+        break;
+      }
+      res.add(message.substring(index, at+3));
+      index = message.indexOf("Caused by:", at);
+    }
+
+    return res;
+  }
 }

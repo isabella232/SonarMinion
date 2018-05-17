@@ -16,8 +16,6 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AnalyzerTest {
-  String[] DATASOURCES = new String[]{"google_groups", "servicedesk"};
-
 
   @Test
   public void test_returned_message() {
@@ -99,6 +97,26 @@ public class AnalyzerTest {
         String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
         Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
         assertThat(new Analyzer().getProducts(message.description)).containsExactlyInAnyOrder(expected[i - 1]);
+    }
+  }
+
+  @Test
+  public void errorMessage() throws IOException {
+    String[][] expected = new String[][]{
+      {"Caused by: java.lang.UnsupportedOperationException: a measure can be set only once for a specific Component (key=net.lidl:imagereader:BRANCH:feature-12345), Metric (key=skipped_tests). Use update method \tat "},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    };
+    for (int i = 1; i <= 8; i++) {
+      File file = new File("src/test/resources/servicedesk/input" + i + ".json");
+      String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
+      Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
+      assertThat(new Analyzer().getErrorMessages(message.description)).containsExactlyInAnyOrder(expected[i-1]);
     }
   }
 }
