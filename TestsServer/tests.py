@@ -1,5 +1,6 @@
 import requests
 import unittest
+import os
 
 def send_message(message):
 	#url = 'http://localhost:9001/analyze'
