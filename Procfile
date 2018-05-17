@@ -1,1 +1,1 @@
-web: java -jar minion-service/target/minion-service-1.0-SNAPSHOT-jar-with-dependencies.jar
+web: java -jar minion-service/target/minion-service-1.0-SNAPSHOT-jar-with-dependencies.jar "$PORT"
