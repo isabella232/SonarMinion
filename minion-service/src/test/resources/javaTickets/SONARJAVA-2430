@@ -1,0 +1,1 @@
+{"description":"Semantic analysis crash with a stackOverflowError when trying to infer type on the following project : https://github.com/kuliniew/sonarqube-crash-repro","component":"SonarJava","component_version":"4.13"}

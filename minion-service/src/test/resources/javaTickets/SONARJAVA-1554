@@ -1,0 +1,1 @@
+{"description":"No issue should be raised if the body of try block contains call to unknown methods, as we don\u0027t know if these methods could throw Exception.\r\n\r\n{code}\r\nclass B {\r\n  public void foo() {\r\n    try {\r\n      unknownMethod();\r\n    } catch (Exception e) { // Compliant\r\n    }\r\n  }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.12"}

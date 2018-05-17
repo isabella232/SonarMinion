@@ -1,0 +1,1 @@
+{"description":"{code}\r\n    char[] chars \u003d new char[]{\u0027a\u0027, \u0027b\u0027, \u0027b\u0027};\r\n    System.out.println(chars.toString());\r\n    System.out.println(String.valueOf(chars));\r\n{code}\r\n\r\noutputs : \r\n{code}\r\n[C@66ae0840\r\nabb\r\n{code}\r\nSo both expressions are not equivalent. ","component":"SonarJava","component_version":"3.14"}

@@ -1,0 +1,1 @@
+{"description":"Here is the piece of code to reproduce the issue :\n\n{code}\npackage com.google.foo;\n\nimport com.google.foobar.*; //\u003c- Unexpected issue here\nimport java.util.*;\n\npublic class MyClass {...}\n{code}","component":"SonarJava","component_version":"2.1"}

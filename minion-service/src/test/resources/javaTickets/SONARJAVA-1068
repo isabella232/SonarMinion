@@ -1,0 +1,1 @@
+{"description":"Since a few version of the java plugin the weight of dependency is not computed properly and (wrongly) always set to 1. \n\n","component":"SonarJava","component_version":""}

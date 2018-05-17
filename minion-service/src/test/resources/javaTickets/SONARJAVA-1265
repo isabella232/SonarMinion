@@ -1,0 +1,1 @@
+{"description":"{code} \r\npackage foo;\r\nclass A  {\r\n class B{}\r\n}\r\n{code} \r\n\r\nfully qualified name for B should return foo.A$B; \r\n\r\nClass declared within method should be also looked after.","component":"SonarJava","component_version":"3.6"}

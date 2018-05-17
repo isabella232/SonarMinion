@@ -1,0 +1,1 @@
+{"description":"{code}\r\nvoid plop() {\r\n    Boolean still \u003d false;\r\n    for(Foo foo : foos) {\r\n      for(Foo foo : foos) {\r\n        if(condition) {\r\n          still \u003d true;\r\n        }\r\n      }\r\n\r\n    }\r\n    if(still) {} // false positive\r\n  }\r\n{code}","component":"SonarJava","component_version":"3.10"}

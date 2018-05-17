@@ -1,0 +1,1 @@
+{"description":"The following code trigger an NPE.\r\n\r\n{code}\r\nclass C {\r\n  public Boolean foo() {\r\n    Stream.of(\"A\").forEach(a -\u003e {\r\n      return; // NPE as return statement expression is empty.\r\n    });\r\n    return true;\r\n  }\r\n}\r\n{code}","component":"SonarJava","component_version":"4.0"}

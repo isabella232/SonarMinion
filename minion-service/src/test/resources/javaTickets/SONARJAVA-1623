@@ -1,0 +1,1 @@
+{"description":"The following methods of {{Enum}} can not be resolved from bytecode, as they are implicit. Therefore, they have to be added manually to the semantic.\r\n\r\n{code}\r\npublic static E[] values();\r\npublic static E valueOf(String name);\r\n{code}","component":"SonarJava","component_version":"3.13"}

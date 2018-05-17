@@ -1,0 +1,1 @@
+{"description":"An {{Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: -1}} exception is raised when this rule encounters a completely empty file. (with no comment). ","component":"SonarJava","component_version":"4.9"}

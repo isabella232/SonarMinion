@@ -1,0 +1,1 @@
+{"description":"Rules relying on legacy keys (such as RSPEC-1144, UnusedPrivateMethod) are not activated by default anymore in SQ 6.0 context, as the legacy key won\u0027t be found in the sonar-way profile file, which only contains pure RSPEC keys (S1144).","component":"SonarJava","component_version":"4.9"}

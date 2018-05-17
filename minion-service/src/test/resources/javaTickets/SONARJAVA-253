@@ -1,0 +1,1 @@
+{"description":"This code snippet produces a parsing error:\n{code}\n    double pi \u003d Math.PI; /\\u002A\n    System.out.println(pi);\n\n    /* a comment */\n{code}\n\nbut unfortunately it seems to be a valid Java code :( where System.out is commented out.","component":"SonarJava","component_version":""}

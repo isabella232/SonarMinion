@@ -1,0 +1,1 @@
+{"description":"Instead of correctly displaying the type of the array, we display {{$Array}}\r\n\r\n{code}\r\n  @FunctionalInterface\r\n  interface foo { // Drop this interface in favor of \"java.util.function.IntFunction\u003c$Array\u003e\"\r\n    byte[] bar(int value);\r\n  }\r\n{code}","component":"SonarJava","component_version":"4.3"}

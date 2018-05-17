@@ -1,0 +1,1 @@
+{"description":"Description is wrong stating that fallthrough can be triggered using continue in java. \r\n\r\nImplementation should not mark switch as compliant when encountering a continue statement. ","component":"SonarJava","component_version":"3.5"}

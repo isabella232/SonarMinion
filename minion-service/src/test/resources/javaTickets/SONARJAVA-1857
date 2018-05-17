@@ -1,0 +1,1 @@
+{"description":"When property {{sonar.squid.analyse.property.accessors}} has been dropped, undocumented accessors (Getters and Setters) have been considered as undocumented API.\r\n\r\nUndocumented accessors should still be counted as public API, but excluded when counting undocumented API.","component":"SonarJava","component_version":""}

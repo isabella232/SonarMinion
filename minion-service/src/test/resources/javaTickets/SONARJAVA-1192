@@ -1,0 +1,1 @@
+{"description":"In following case, we don\u0027t expect to have one issue :\r\n\r\n{code}\r\nimport org.example.Clazz;   \u003c-unexpected issue\r\n/**\r\n* {@link Clazz}\r\n*/\r\n{code}","component":"SonarJava","component_version":""}

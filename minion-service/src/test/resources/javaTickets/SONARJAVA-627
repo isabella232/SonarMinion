@@ -1,0 +1,1 @@
+{"description":"For example, with the following expression:\n\n{code}\nnew int[1][][]\n{code}\n\nThis should create an array of dimension 1, containing elements of type \"int[][]\".\n\nHowever, at the moment, it indeed creates an array of dimension 1, but of element whose types is simply \"int\".","component":"SonarJava","component_version":""}

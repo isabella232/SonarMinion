@@ -1,0 +1,1 @@
+{"description":"When type param are empty and there are no arguments, an empty substitution is returned. \r\nThis should also be the case when the parameterization can\u0027t be infered from arguments type. \r\n{code}\r\n  \u003cK\u003e K foo(String s) {\r\n\r\n  }\r\n{code}","component":"SonarJava","component_version":"4.0"}

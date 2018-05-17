@@ -1,0 +1,1 @@
+{"description":"Severity of the rule is decreased to MINOR, as results of the check are more findings than issues.\r\n\r\n{code}\r\ninterface foo extends bar { // FP: cannot be annotated with @FunctionalInterface\r\n void plop1();\r\n}\r\n\r\ninterface bar {\r\n  void plop2();\r\n}\r\n{code}","component":"SonarJava","component_version":"4.0"}

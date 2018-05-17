@@ -1,0 +1,1 @@
+{"description":"{code}\r\n\r\nclass A { \r\nint b;\r\n  int foo() {\r\n   return b++; //false positive, increment is not useless as b is a field.\r\n  }\r\n\r\n}\r\n{code}\r\n\r\n","component":"SonarJava","component_version":"3.8"}

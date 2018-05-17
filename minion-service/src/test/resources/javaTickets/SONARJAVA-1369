@@ -1,0 +1,1 @@
+{"description":"The following code raise an {{IndexOutOfBoundsException}} when analysed: \r\n{code}String.format(\"log/protocol_%tY_%\u003ctm_%\u003ctd_%\u003ctH_%\u003ctM_%\u003ctS.zip\", new Date());{code}","component":"SonarJava","component_version":"3.8"}

@@ -1,0 +1,1 @@
+{"description":"This causes to have Squid having the wrong line number and could potentially lead to count an undocumented API wrongly.\n","component":"SonarJava","component_version":""}

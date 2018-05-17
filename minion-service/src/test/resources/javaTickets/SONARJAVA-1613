@@ -1,0 +1,1 @@
+{"description":"NPE triggered by analysis of jdk9, which now use lambdas within {{java.lang}} package.","component":"SonarJava","component_version":"3.13"}

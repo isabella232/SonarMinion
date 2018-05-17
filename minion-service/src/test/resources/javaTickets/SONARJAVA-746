@@ -1,0 +1,1 @@
+{"description":"When requesting the line for a {{ClassTree}} it is based on the simpleName of that tree which can be null for anonymous class.\nFor anonymous class, the reported line should rely on the default {{JavaTree}} behaviour.\n\n","component":"SonarJava","component_version":"2.5.1"}

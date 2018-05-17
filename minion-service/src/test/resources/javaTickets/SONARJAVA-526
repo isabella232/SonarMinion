@@ -1,0 +1,1 @@
+{"description":"Some syntaxes are not supported by the parser in its current state : \nReferencing a method of an outer class within an inner class : \n{code}\nMyClass.this::square\n{code}\n\nReferencing the method of an object returned by a method call :\n{code}\nmyMethod()::square\n{code}","component":"SonarJava","component_version":"2.3"}

@@ -1,0 +1,1 @@
+{"description":"In semantic analysis, when a fully qualified name is encountered, its type is not properly solved. \n\n{code}\nclass A extends java.util.List { //Type List is not properly resolved.\n\n}\n{code}","component":"SonarJava","component_version":"2.5.1"}

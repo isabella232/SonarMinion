@@ -65,7 +65,7 @@ public class Analyzer {
     if (message.component_version == null || message.component_version.isEmpty()) {
       versions = getVersions(message.description);
       if (versions.isEmpty()) {
-        return "Seems like there isno product nor version in your question, could you clarify this information ?";
+        return "Seems like there is no product nor version in your question, could you clarify this information ?";
       }
     } else {
       versions.add(message.component_version);

@@ -1,0 +1,1 @@
+{"description":"The parsed tree of a file is stored but not released and therefore it leads to a memory leak. \r\n","component":"SonarJava","component_version":"3.8"}

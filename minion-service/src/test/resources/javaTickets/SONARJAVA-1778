@@ -1,0 +1,1 @@
+{"description":"{code}\r\nclass A\u003cT extends Throwable\u003e {\r\n   void foo() throws T {\r\n   }\r\n}\r\n\r\nnew A\u003cIOException\u003e().foo(); // resolved method type should throw the correct IOException and neither T or its erasure\r\n{code}\r\n\r\n","component":"SonarJava","component_version":"4.9"}

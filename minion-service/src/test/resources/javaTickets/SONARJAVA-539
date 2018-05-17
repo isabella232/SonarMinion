@@ -1,0 +1,1 @@
+{"description":"When using a custom method named finalize that does not overrides {{Object.finalize}} the check ObjectFinalizeOverridenCallsSuperFinalizeCheck raises an unexpected issue. \n\nFor example : \n{code}\npublic void finalize(Object pf, int mode)\n{code}\n","component":"SonarJava","component_version":"2.3"}

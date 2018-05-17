@@ -1,0 +1,1 @@
+{"description":"The following rules are declared twice in the file rules.xml : \n* EC_INCOMPATIBLE_ARRAY_COMPARE\n* NM_LCASE_TOSTRING\n* LG_LOST_LOGGER_DUE_TO_WEAK_REFERENCE","component":"SonarJava","component_version":"2.1"}

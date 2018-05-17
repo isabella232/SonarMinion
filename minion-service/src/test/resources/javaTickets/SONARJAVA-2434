@@ -1,0 +1,1 @@
+{"description":"UnclosedResourcesCheck throws NPE when some symbols are not resolved, thus failing analysis.","component":"SonarJava","component_version":"4.13"}

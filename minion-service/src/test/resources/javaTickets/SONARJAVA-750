@@ -1,0 +1,1 @@
+{"description":"{code}\nprivate final int object \u003d (Type\u003c?\u003e) foo;\n{code}\nSuch a construction will raise an issue as the wildcard will have a null children in its children iterator (the bound in this case). This will result in a null pointer exception in the check.","component":"SonarJava","component_version":"2.5.1"}

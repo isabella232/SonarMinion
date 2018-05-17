@@ -1,0 +1,1 @@
+{"description":"{code}\r\nvoid foo(int i, int j, int k) {\r\n    switch (i\u003d\u003d-1 ? j:k) {\r\n      default:;\r\n    }\r\n  }\r\n{code}\r\n\r\nIn this case the CFG wrongly start with switch statement ignoring completely the conditional expression. This results in an NPE in SE this case.","component":"SonarJava","component_version":"3.11"}

@@ -1,0 +1,1 @@
+{"description":"Jacoco sensor does not log any information at all if the coverage report is not found unless {{sonar.jacoco.reportMissing.force.zero}} is explicitly set to _true_.\r\n","component":"SonarJava","component_version":"3.9"}

@@ -1,0 +1,1 @@
+{"description":"Even being private, the method will be called by the AspectJ engine.\r\n\r\n{code}\r\n@Pointcut(\"execution(public * *(..))\")\r\nprivate void publicMethod() { // compliant\r\n // Selector for public methods\r\n}\r\n{code}","component":"SonarJava","component_version":"4.0"}

@@ -1,0 +1,1 @@
+{"description":"The following code reproduces the bahavior:\n\n{code}\npublic enum Foo {\n  FOO {\n    public void foo() {\n    }\n  };\n}\n{code}","component":"SonarJava","component_version":"2.0"}

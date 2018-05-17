@@ -1,0 +1,1 @@
+{"description":"Lambdas using block as body are not correctly handled.\r\n{code}\r\nclass A{\r\n  void foo() {\r\n    IntStream\r\n      .range(1,5)\r\n      .map(a -\u003e {\r\n        a+1; // should be a valid position\r\n      });\r\n  }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.9"}

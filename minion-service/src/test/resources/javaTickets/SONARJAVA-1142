@@ -1,0 +1,1 @@
+{"description":"A file with a path like \r\n{{foo/bar/java/lang/MyClass.java}} will not have its semantic created because of bad exclusion of java.lang files in {{VisitorsBridge}} which is buggy.\r\n\r\n","component":"SonarJava","component_version":"3.4"}

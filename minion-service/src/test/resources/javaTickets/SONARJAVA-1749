@@ -1,0 +1,1 @@
+{"description":"{code}\r\n  boolean foo() {\r\n    return (boolean) !identifier \u0026\u0026 foo;\r\n  }\r\n{code}","component":"SonarJava","component_version":"4.2"}

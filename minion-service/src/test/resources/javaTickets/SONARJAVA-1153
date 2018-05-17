@@ -1,0 +1,1 @@
+{"description":"The following code should not raise an issue. The rule trigger an issue when encountering the \"+\" operator without checking lines.\r\n{code}\r\n  String msg \u003d String.format(\r\n    \"line1 %s \" +  // Should not raise an issue\r\n    \"line2\", \"myValue\");\r\n{code}","component":"SonarJava","component_version":"3.4"}

@@ -1,0 +1,1 @@
+{"description":"Exit block of CFG should have no successors. There is a bug in the way try catch are handled that can lead to this absurd situation where exit block has exceptional successors.","component":"SonarJava","component_version":"4.15"}

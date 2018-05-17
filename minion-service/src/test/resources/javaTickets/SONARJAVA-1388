@@ -1,0 +1,1 @@
+{"description":"Constant declared in interface should not be considered as magic numbers!\r\n{code}\r\npublic MyInterface interface {\r\n  int MY_FIELD \u003d 1;\r\n}\r\n{code}\r\n\r\nFix: The check should rely on semantic API to identify final variables instead of only looking at the presence of the final modifier.","component":"SonarJava","component_version":"3.8"}

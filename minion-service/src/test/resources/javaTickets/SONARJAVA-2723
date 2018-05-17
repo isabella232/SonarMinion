@@ -1,0 +1,1 @@
+{"description":"{{ContinueStatementTree}} has {{continue}} keyword duplicated instead of the label as a child.\r\n\r\nSee https://github.com/SonarSource/sonar-java/blob/0d545786c262e5ec0aa4e14f0763ef98ec670c37/java-frontend/src/main/java/org/sonar/java/model/statement/ContinueStatementTreeImpl.java#L79 \r\n\r\n","component":"SonarJava","component_version":"5.3"}

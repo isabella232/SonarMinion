@@ -1,0 +1,1 @@
+{"description":"In the following case, the two violations are ignored whereas only one should be :\n\n{code}\npublic MyClass{\n  private String firstParameter \u003d \"\";\n\n  public String secondParameter \u003d \"\";\n}\n{code}","component":"SonarJava","component_version":""}

@@ -1,0 +1,1 @@
+{"description":"{code}\r\nvoid foo(List\u003cString\u003e myList) {\r\n  bar(myList.stream().sorted().collect(Collectors.toList())); // method bar() is not resolved\r\n}\r\n\r\nprivate void bar(List\u003cString\u003e myList) {\r\n // ...\r\n}\r\n{code}","component":"SonarJava","component_version":""}

@@ -1,0 +1,1 @@
+{"description":"When exploring methods that have a cycling call graph the behavior may be computed multiple time as the {{SymbolicExecutionVisitor}} do not leverage what\u0027s already in the cache of behaviors. This can end up doing multiple times the same computation. ","component":"SonarJava","component_version":"4.8"}

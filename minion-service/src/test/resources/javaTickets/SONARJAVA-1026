@@ -1,0 +1,1 @@
+{"description":"Comparing two unrelated interfaces should raise an issue. EC_UNRELATED_INTERFACES\nComparing a (non-final) class with an unrelated interface should raise an issue\n\nUnrelated types are hard to compute as soon as interfaces are involved, since the whole hierarchy needs to be examined","component":"SonarJava","component_version":""}

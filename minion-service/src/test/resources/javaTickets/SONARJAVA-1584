@@ -1,0 +1,1 @@
+{"description":"{code}\r\nclass A {\r\n   void foo(Object o) {}\r\n}\r\n\r\nclass B extends A {\r\n  void foo(String s, Object... o) {}\r\n\r\n   void test() {\r\n      foo(null);\r\n      foo(\"\");  // Those call should be resolved to the method defined in A and not the one defined in B.\r\n   }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.12"}

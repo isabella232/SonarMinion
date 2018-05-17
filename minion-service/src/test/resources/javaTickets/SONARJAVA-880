@@ -1,0 +1,1 @@
+{"description":"The {{JavaClasspath}} batch extension needs to access the {{FileSystem}} API. In certain cases (for instance when the findbugs plugin is present), the access to this API will happen before the sensor phase during an analysis, provoking a warning in LTS SQ version and a failure in with SQ 5.0+. \n\n","component":"SonarJava","component_version":"2.9.1"}

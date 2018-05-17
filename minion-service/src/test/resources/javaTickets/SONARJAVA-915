@@ -1,0 +1,1 @@
+{"description":"{code}\npublic final boolean equals(Object j) { //should not raise issue, it cannot be extended and it is used to finalize equals implementation\n  return super.equals(j);\n}\n{code}\nSame story for hashCode and toString.","component":"SonarJava","component_version":"3.0"}

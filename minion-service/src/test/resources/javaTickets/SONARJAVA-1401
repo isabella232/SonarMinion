@@ -1,0 +1,1 @@
+{"description":"Currently when \u0026\u0026 and || operators are nested too deeply the produced CFG is wrong. \r\n\r\n{code}\r\nx \u003d a \u0026\u0026 b || c ;\r\n{code}","component":"SonarJava","component_version":"3.8"}

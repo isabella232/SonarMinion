@@ -1,0 +1,1 @@
+{"description":"The following code triggers the NPE:\n\n{code}\npublic interface IFoo {\n\n  static IFoo FOO \u003d new IFoo() {\n    public void foo() {\n    }\n  };\n\n}\n{code}\n\nThe root cause is that anonymous classes were not fully supported by this rule.","component":"SonarJava","component_version":"1.5"}

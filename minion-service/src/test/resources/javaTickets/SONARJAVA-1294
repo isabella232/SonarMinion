@@ -1,0 +1,1 @@
+{"description":"\r\nThis has an impact of how sonarLint (especially for intellij) is reporting errors : \r\nSee https://groups.google.com/a/sonarsource.com/d/msg/sonarlint-for-intellij/Dm7ZR9AoV6I/ZuXgbCFvDQAJ\r\n\r\n","component":"SonarJava","component_version":""}

@@ -1,0 +1,1 @@
+{"description":"If a type is not found in a static import, it will be resolved as a ABSENT type. \r\nAs this is also a type, a lookup will be attempted resulting in  class cast exception. \r\n\r\n{code}\r\nimport static java.util.Collections.FOO.*;\r\n{code}","component":"SonarJava","component_version":"3.12"}

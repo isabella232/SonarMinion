@@ -1,0 +1,2555 @@
+Ticket :SONARJAVA-164
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2526
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-602
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-501
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1745
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1612
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1662
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1838
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2183
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-56
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1696
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1811
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1360
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2645
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2583
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1827
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1699
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-805
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1690
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-583
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-608
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2599
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2355
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1675
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1541
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1388
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1558
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1067
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-793
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1150
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-755
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1386
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2434
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2600
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1950
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1781
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2246
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-444
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2175
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1867
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-635
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1213
+SONARJAVA-1213, 
+Products found : SonarJava - 3.5
+Errors found :     at org.sonar.java.ast.JavaAstScanner.simpleScan(JavaAstScanner.java:102),    at org.sonar.java.symexec.ExecutionState.setBooleanConstraint(ExecutionState.java:185)
+=================================================
+=================================================
+Ticket :SONARJAVA-1975
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1556
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-161
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1480
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2027
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1229
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-967
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-507
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1722
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1418
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1220
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2171
+SONARJAVA-2171, SLE-158, SONARJAVA-2123, SONARMSBRU-291, SONARJAVA-1764, SLCORE-83, DOTNETLIB-10, MSONAR-154, SONAR-7647, SONARGITUB-26, SONARGITUB-31, SONARGITUB-27, DOTNETLIB-5, MSONAR-124, SONAR-8314, 
+Products found : SonarJava - 4.7
+Errors found :     at org.sonar.api.internal.google.common.base.Preconditions.checkArgument(Preconditions.java:145),    at org.sonarsource.scanner.maven.bootstrap.ExceptionHandling.handle(ExceptionHandling.java:36)
+=================================================
+=================================================
+Ticket :SONARJAVA-442
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-54
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2582
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-553
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1201
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1743
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1857
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2467
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2087
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-611
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2694
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-750
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-367
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2572
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2295
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2166
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-738
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1797
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-933
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1061
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-447
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1218
+SONARJAVA-1218, 
+Products found : SonarJava - 3.9
+Errors found :         at org.sonar.java.resolve.Resolve.findMemberType(Resolve.java:201) ~[java-squid-3.4.jar:na]
+=================================================
+=================================================
+Ticket :SONARJAVA-418
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1910
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1155
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-961
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-159
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-746
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2279
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2243
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-82
+SONARJAVA-82, 
+Products found : SonarJava - 1.2
+Errors found :         at org.sonar.java.ast.visitors.MethodHelper.getReturnType(MethodHelper.java:78)
+=================================================
+=================================================
+Ticket :SONARJAVA-1676
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2338
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1888
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2055
+SONARJAVA-2055, 
+Products found : SonarJava - 4.8
+Errors found :     at org.sonar.maven.model.XmlLocation.<init>(XmlLocation.java:30)
+=================================================
+=================================================
+Ticket :SONARJAVA-2669
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1482
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-114
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1704
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2209
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1988
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2300
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-766
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1639
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2179
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2720
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2296
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-839
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1052
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1942
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-410
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-607
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2704
+SONARJAVA-2704, 
+Products found : SonarJava - 5.3
+Errors found : 	at com.sonar.security.UCFGJavaVisitor.buildMethodInvocation(UCFGJavaVisitor.java:200)
+=================================================
+=================================================
+Ticket :SONARJAVA-2613
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-753
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1402
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-585
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1826
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1930
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-916
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2033
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1701
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1965
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1379
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-157
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1324
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2123
+SLE-158, SONARJAVA-2123, SONARMSBRU-291, SLCORE-83, DOTNETLIB-10, SONARJAVA-2171, DOTNETLIB-5, 
+Products found : SonarJava - 4.6
+Errors found : 	at org.sonar.api.internal.google.common.base.Preconditions.checkArgument(Preconditions.java:145)
+=================================================
+=================================================
+Ticket :SONARJAVA-1267
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1702
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2114
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1545
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-659
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1299
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-100
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2738
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-174
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1831
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-804
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-36
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2237
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1969
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2473
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1727
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-644
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1146
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-526
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-472
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-927
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1118
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2591
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2248
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1719
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1517
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-679
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2515
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1861
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2050
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1430
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1680
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-44
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-566
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2043
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2074
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1653
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1730
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1778
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1902
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-180
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-971
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1868
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1915
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1369
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2053
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1301
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1033
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-740
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1265
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1091
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-934
+SONARJAVA-934, SONARJAVA-1106, SONARJAVA-1059, SONAR-6847, SONARJAVA-805, MSONAR-129, SONARJAVA-933, SONAR-6276, 
+Products found : SonarJava - 3.1
+Errors found : 	at org.codehaus.mojo.sonar.bootstrap.ExceptionHandling.handle(ExceptionHandling.java:41),	at org.sonar.java.checks.ReflectionOnNonRuntimeAnnotationCheck.isNotRuntimeAnnotation(ReflectionOnNonRuntimeAnnotationCheck.java:75),	at org.sonar.java.ast.AstScanner.simpleScan(AstScanner.java:114)
+=================================================
+=================================================
+Ticket :SONARJAVA-1873
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1373
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1635
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2149
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-552
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1247
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-111
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-609
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1080
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1516
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-434
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1636
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-655
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2196
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-218
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1025
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1678
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-428
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-80
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-421
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2234
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2632
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-946
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2458
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-69
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2397
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1458
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-7
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1592
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1387
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2580
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-383
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1543
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-173
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2460
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1184
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2029
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2014
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-610
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2454
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1713
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-896
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-484
+SONARJAVA-484, 
+Products found : SonarJava - 2.4
+Errors found : error	10-Dec-2013 06:14:55	Caused by: java.util.MissingFormatArgumentException: Format specifier 'd'
+=================================================
+=================================================
+Ticket :SONARJAVA-2747
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1864
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2646
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1417
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1326
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1617
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2077
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-603
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2277
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1498
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-764
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1715
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1554
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-627
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1540
+SONARJAVA-1540, SONARJAVA-1766, 
+Products found : SonarJava - 3.11
+Errors found : 	at org.sonar.api.internal.google.common.base.Preconditions.checkArgument(Preconditions.java:148),	at org.sonar.java.xml.maven.PomCheckContextImpl.reportIssue(PomCheckContextImpl.java:62)
+=================================================
+=================================================
+Ticket :SONARJAVA-287
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2224
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1153
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1429
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2350
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2271
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2716
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1026
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1991
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1060
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2421
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-84
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-748
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-48
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-986
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1817
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-384
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-480
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-396
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1659
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2213
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-322
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-617
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1923
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1637
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1099
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-368
+SONARJAVA-368, 
+Products found : SonarJava - 2.0
+Errors found : 	at org.sonar.java.ast.AstScanner.scan(AstScanner.java:102),	at org.sonar.java.checks.MethodOnlyCallsSuperCheck.isUselessSuperCall(MethodOnlyCallsSuperCheck.java:112)
+=================================================
+=================================================
+Ticket :SONARJAVA-1179
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1814
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-821
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1729
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1980
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-181
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1156
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-917
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-216
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-539
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-591
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-919
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2164
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1892
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2734
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2597
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-645
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-14
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-533
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1896
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1623
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1230
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2128
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2287
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-419
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-324
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2724
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-83
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2173
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1872
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2185
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2564
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2742
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1463
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1925
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-452
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-978
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2360
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2079
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1694
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1869
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1557
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1973
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2205
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1744
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2112
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1714
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-336
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1863
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1620
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1889
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-612
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-849
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1042
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2364
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2320
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1298
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1559
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1616
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-329
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-379
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1371
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1413
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-527
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-525
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-408
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2362
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-901
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-536
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1149
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2594
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1860
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1724
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1879
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-953
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1692
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1347
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1376
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-46
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1403
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-567
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1648
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-606
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1291
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2116
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-19
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-809
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-905
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2733
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1340
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2203
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-137
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1808
+SONARJAVA-1808, 
+Products found : SonarJava - 4.2
+Errors found : 	at org.sonar.java.se.symbolicvalues.BinarySymbolicValue.computedFrom(BinarySymbolicValue.java:49)
+=================================================
+=================================================
+Ticket :SONARJAVA-1294
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1454
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1442
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1063
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2533
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-956
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1064
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2340
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-726
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1258
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2447
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-959
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1459
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2477
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2140
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-51
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-562
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-758
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2091
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-542
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2431
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1665
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2609
+SONARJAVA-2609, 
+Products found : SonarJava - 5.3
+Errors found : 	at org.sonar.java.resolve.BytecodeVisitor.visitOuterClass(BytecodeVisitor.java:128)
+=================================================
+=================================================
+Ticket :SONARJAVA-338
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1147
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1513
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-732
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1577
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-649
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1613
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1183
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1237
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-761
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1503
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2059
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2636
+SONARJAVA-2636, 
+Products found : SonarJava - 5.1.1
+Errors found : 	at org.sonar.java.resolve.LeastUpperBound.leastContainingTypeArgument(LeastUpperBound.java:251) ~[classes/:na]
+=================================================
+=================================================
+Ticket :SONARJAVA-2718
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-880
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1485
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1721
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-985
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1538
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1537
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1162
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-253
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2459
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1731
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1404
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1169
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2703
+SONARJAVA-2703, SONARJAVA-2702, 
+Products found : SonarJava - 5.3
+Errors found : 	at com.sonar.security.UCFGJavaVisitor.buildUCfg(UCFGJavaVisitor.java:90)
+=================================================
+=================================================
+Ticket :SONARJAVA-2031
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2463
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1742
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2273
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-550
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-936
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2659
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-402
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2521
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2225
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1
+SONARJAVA-1, 
+Products found : SonarJava - 1.1
+Errors found : 	at org.sonar.java.ast.lexer.CharacterLiteralChannel.consume(CharacterLiteralChannel.java:50)
+=================================================
+=================================================
+Ticket :SONARJAVA-1535
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1992
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-356
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-660
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1005
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2643
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2222
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-754
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-590
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1372
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1647
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1968
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2565
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-735
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-813
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2483
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-922
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1951
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-588
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1491
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-918
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-875
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1865
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-89
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1238
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2239
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-432
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1660
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2655
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1776
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2602
+SONARJAVA-2602, 
+Products found : SonarJava - 5.1
+Errors found : 	at org.sonar.java.checks.UnconditionalJumpStatementCheck.lambda$getLoopBlock$1(UnconditionalJumpStatementCheck.java:159)
+=================================================
+=================================================
+Ticket :SONARJAVA-881
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2118
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-787
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1024
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2030
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1106
+SONARJAVA-1106, 
+Products found : SonarJava - 3.4
+Errors found :     13:59:10 Caused by: org.sonar.squidbridge.api.AnalysisException: SonarQube is unable to analyze file : '/var/lib/jenkins/workspace/ing_trunk_sonar/sources/cib-actions/src/main/java/com/company/cib/corpo/struts/actions/IngCcsRightsAction.java',    13:59:10 Caused by: org.apache.maven.plugin.MojoExecutionException: SonarQube is unable to analyze file : '/var/lib/jenkins/workspace/ing_trunk_sonar/sources/cib-actions/src/main/java/com/company/cib/corpo/struts/actions/IngCcsRightsAction.java',    13:59:10 Caused by: java.lang.ClassCastException: org.sonar.java.model.expression.MethodInvocationTreeImpl cannot be cast to org.sonar.plugins.java.api.tree.IdentifierTree
+=================================================
+=================================================
+Ticket :SONARJAVA-429
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-50
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1420
+SONARJAVA-1420, 
+Products found : SonarJava - 3.9
+Errors found : 	at org.sonar.java.ast.parser.TreeFactory.completeTypeTreeWithAnnotations(TreeFactory.java:1900)
+=================================================
+=================================================
+Ticket :SONARJAVA-960
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-541
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-757
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1490
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1984
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2056
+SONARJAVA-2056, 
+Products found : SonarJava - 4.5
+Errors found : 	at org.sonar.java.checks.PrivateFieldUsedLocallyCheck.containingClassOrMethod(PrivateFieldUsedLocallyCheck.java:122)
+=================================================
+=================================================
+Ticket :SONARJAVA-1531
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-993
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-879
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-834
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1622
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2377
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-786
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1564
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1533
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2611
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-524
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1627
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2402
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-876
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-113
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2188
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2047
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1185
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2556
+SONARJAVA-2556, 
+Products found : SonarJava - 5.0
+Errors found : 	at org.sonar.java.bytecode.se.BytecodeEGWalker.getMethodBehavior(BytecodeEGWalker.java:292),	at org.sonar.java.bytecode.se.BytecodeEGWalker.executeInstruction(BytecodeEGWalker.java:409)
+=================================================
+=================================================
+Ticket :SONARJAVA-2351
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1142
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1396
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1028
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1548
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-964
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1853
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1585
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1477
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2206
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-745
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-29
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1565
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2585
+SONARJAVA-2585, 
+Products found : SonarJava - 5.1.1
+Errors found : 	at org.sonar.java.checks.ReflectionOnNonRuntimeAnnotationCheck.isNotRuntimeAnnotation(ReflectionOnNonRuntimeAnnotationCheck.java:67)
+=================================================
+=================================================
+Ticket :SONARJAVA-1987
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1706
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1658
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-593
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-52
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-661
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2462
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1839
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2363
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1252
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1624
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1874
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-749
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1766
+SONARJAVA-1766, SONARJAVA-1540, 
+Products found : SonarJava - 4.0
+Errors found : 	at org.sonar.api.internal.google.common.base.Preconditions.checkArgument(Preconditions.java:148)
+=================================================
+=================================================
+Ticket :SONARJAVA-1055
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1233
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2552
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1362
+SONARJAVA-1362, 
+Products found : SonarJava - 3.8
+Errors found : 	at org.sonar.java.checks.methods.MethodMatcher.matches(MethodMatcher.java:109)
+=================================================
+=================================================
+Ticket :SONARJAVA-2474
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1341
+SONARJAVA-1341, 
+Products found : SonarJava - 3.7
+Errors found : 	at org.sonar.java.checks.SerializableFieldInSerializableClassCheck.isSerializable(SerializableFieldInSerializableClassCheck.java:129),Caused by: java.lang.ClassCastException: org.sonar.java.model.JavaTree$WildcardTreeImpl cannot be cast to org.sonar.plugins.java.api.tree.TypeTree
+=================================================
+=================================================
+Ticket :SONARJAVA-2197
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1607
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-861
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1606
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-878
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1841
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2182
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1823
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2127
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1200
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1515
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1809
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-135
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2461
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1068
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1821
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1530
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-92
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1749
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-769
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-328
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1679
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2137
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-569
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1465
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1527
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1746
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2075
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1666
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1048
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-85
+SONARJAVA-85, SCANNERAPI-88, SONAR-3869, SONARPLSQL-366, CPP-314, SONAR-4228, SONAR-4024, SONAR-4133, SONARCS-183, ANTTASK-7, SONARJS-188, 
+Products found : SonarJava - 1.3
+Errors found : 	at org.sonar.java.bytecode.asm.AsmClassProviderImpl.decoracteAsmClassFromBytecode(AsmClassProviderImpl.java:74),	at org.sonar.runner.Runner.delegateExecution(Runner.java:288)
+=================================================
+=================================================
+Ticket :SONARJAVA-1393
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-615
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1677
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1083
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2146
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1457
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1967
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-807
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1525
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2702
+SONARJAVA-2702, 
+Products found : SonarJava - 5.3
+Errors found : 
+	at com.sonar.security.UCFGJavaVisitor.buildMethodInvocation(UCFGJavaVisitor.java:213)
+=================================================
+=================================================
+Ticket :SONARJAVA-1691
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1866
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1398
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1773
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2566
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-595
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2430
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-400
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2207
+SONARJAVA-2207, 
+Products found : SonarJava - 4.8
+Errors found : 	at org.sonar.java.se.symbolicvalues.BinaryRelation.combineTransitivelyOneWay(BinaryRelation.java:279)
+=================================================
+=================================================
+Ticket :SONARJAVA-1943
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1344
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1695
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1979
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-323
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2598
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-521
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1553
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-739
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-473
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1703
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-625
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1542
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-605
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-860
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-420
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1764
+SONARJAVA-1764, SONARJAVA-2171, MSONAR-154, SONAR-7647, SONARGITUB-26, SONARGITUB-31, SONARGITUB-27, MSONAR-124, SONAR-8314, 
+Products found : SonarJava - 4.0
+Errors found : 	at org.sonarsource.scanner.maven.bootstrap.ExceptionHandling.handle(ExceptionHandling.java:36)
+=================================================
+=================================================
+Ticket :SONARJAVA-963
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1501
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1539
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-874
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1937
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-592
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1780
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-752
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-915
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1698
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2723
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1584
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1346
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1266
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1775
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1806
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2630
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-158
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1671
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-858
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-930
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1859
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2008
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1296
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-728
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1059
+SONARJAVA-1059, SONAR-6663, SONAR-5915, SONARMSBRU-141, SFSRAP-44, SONARNTEST-1, SONARPHP-472, SONAR-6000, SONAR-5580, SONAR-6885, SONAR-6792, SCANNERAPI-128, SONARMSBRU-235, SONAR-5837, SONARMSBRU-161, SONARPY-101, SONAR-5028, SONARCS-590, SONARCS-46, SONARJAVA-934, SONARJAVA-1106, SONARCS-651, SONARJAVA-933, SONARJAVA-805, SONARPHP-482, SONAR-4683, SONAR-5049, SONAR-6172, RSPEC-3514, SONARJAVA-160, SONARMSBRU-124, 
+Products found : SonarJava - 3.4
+Errors found :         at org.sonar.java.ast.AstScanner.simpleScan(AstScanner.java:114),        at org.sonar.java.resolve.JavaType$TypeVariableJavaType.erasure(JavaType.java:352),        at org.sonar.runner.impl.BatchLauncher$1.delegateExecution(BatchLauncher.java:91)
+=================================================
+=================================================
+Ticket :SONARJAVA-1739
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-165
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-771
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1401
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2015
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-751
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2211
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-747
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1287
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1914
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2269
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2160
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-910
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2092
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1408
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1197
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-1192
+Seems like there isno product nor version in your question, could you clarify this information ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2094
+We didn't understand the error, could you please describe the error ?
+=================================================
+=================================================
+Ticket :SONARJAVA-2656
+SONARJAVA-2656, 
+Products found : 
+Errors found :         at com.google.common.base.Preconditions.checkState(Preconditions.java:199) ~[sonar-java-plugin-5.0.1.12818.jar:na]
+=================================================
+=================================================

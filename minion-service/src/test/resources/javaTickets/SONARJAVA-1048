@@ -1,0 +1,1 @@
+{"description":"The check currently only look for counter which are reassigned in the body of the loop, and not to conditions.","component":"SonarJava","component_version":""}

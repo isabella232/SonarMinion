@@ -1,0 +1,1 @@
+{"description":"During the pruning phase, inactive exit blocks are not replaced by their successors. \r\n\r\nThis results in odd behaviour during live variable analysis and can lead to NPE in symbolic execution","component":"SonarJava","component_version":"3.11"}

@@ -1,0 +1,1 @@
+{"description":"When computing issue reporting for methods with deep exploded graph recursion in {{FlowComputation#run}} can throw {{StackOverflowException}}.\r\n\r\nAs a solution we can rewrite the recursion imperatively and eliminate the problem, because recursion is tail-recursive.","component":"SonarJava","component_version":"4.5"}

@@ -1,0 +1,1 @@
+{"description":"If a java package contain :\n* A sub package \u0027Foo\u0027\n* And a java source file \u0027Foo.java\u0027\n\nthe Sonar analysis doesn\u0027t fail, but there is no way through the Sonar UI to get access to the source code of Foo.java.","component":"SonarJava","component_version":""}

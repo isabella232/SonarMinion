@@ -1,0 +1,1 @@
+{"description":"When creating AST node structure, annotation type end up with an unecessary empty modifier node. \n\nThis can result in a NPE in left curly brace checks which relies on tokens of previous AST Node (and this meaningless node has no associated token). \n\n","component":"SonarJava","component_version":"2.6"}

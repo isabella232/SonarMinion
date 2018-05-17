@@ -1,0 +1,1 @@
+{"description":"False negative in case:\r\n{code}\r\nnew MyDeprecatedClass(); // no issue is raised here\r\n\r\n@Deprecated\r\nclass MyDeprecatedClass {\r\n}\r\n{code}","component":"SonarJava","component_version":"3.9"}

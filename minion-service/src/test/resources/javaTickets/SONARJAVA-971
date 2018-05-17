@@ -1,0 +1,1 @@
+{"description":"The BytecodeCompleter does not set the supertype of a requested class when its bytecode can not be found. The supertype should be set to {{unknown}}.","component":"SonarJava","component_version":"3.1"}

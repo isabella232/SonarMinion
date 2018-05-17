@@ -1,0 +1,1 @@
+{"description":"Very similar to SONAR-2161, sonar should work with source level of \"7\".\n\nSee http://docs.oracle.com/javase/7/docs/technotes/tools/windows/javac.html","component":"SonarJava","component_version":"1.2"}

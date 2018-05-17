@@ -1,0 +1,1 @@
+{"description":"In order to not miss any misclassification of rules, we should enforce tests to guarantee that rules targeting tests are correctly flagged.","component":"SonarJava","component_version":"5.0"}

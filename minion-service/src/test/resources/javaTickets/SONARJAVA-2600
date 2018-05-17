@@ -1,0 +1,1 @@
+{"description":"Shift instructions should not set {{NON_ZERO}} constraint on result. There is no knowledge on result of shift operation.\r\n\r\nThis causes FPs on {{java.lang.Character#isBmpCodePoint}} from JDK.\r\n","component":"SonarJava","component_version":""}

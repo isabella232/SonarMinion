@@ -1,0 +1,1 @@
+{"description":"The rule raises false positives when a method is called on a variable that is modified by the loop update:\n{code}\nfor (ExecutionState current \u003d state; !current.equals(this); current \u003d current.parentState) { // Issue, false positive\n // ...\n}\n{code}\n","component":"SonarJava","component_version":"3.3"}

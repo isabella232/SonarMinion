@@ -1,0 +1,1 @@
+{"description":"The method {{LiteralUtils.intLiteralValue()}} evaluating the integer value of a {{LiteralTree}} does not handle underscored integers (for instance {{100_000}}, allowed by java 7). When encountered, it triggers a \"NumberFormatException\".\r\n\r\n","component":"SonarJava","component_version":"3.5"}

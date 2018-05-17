@@ -1,0 +1,1 @@
+{"description":"{code}\r\nswitch(a) {\r\n  case 1: // this comment should not count as a line -\u003e raise false positive.\r\n    foo();\r\n    foo();\r\n    foo();\r\n    foo();\r\n    foo();\r\n  case 2:\r\n}\r\n{code}","component":"SonarJava","component_version":"3.4"}

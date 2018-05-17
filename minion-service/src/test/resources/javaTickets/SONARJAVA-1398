@@ -1,0 +1,1 @@
+{"description":"{code}\r\nclass RollingCalendar extends  java.util.GregorianCalendar {\r\n    RollingCalendar() {\r\n      super(); // cause IOOBE\r\n    }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.8"}

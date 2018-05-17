@@ -1,0 +1,1 @@
+{"description":"Currently we able to parse:\n{code}\ntry (int a \u003d open()) {\n}\n{code}\nwhereas should not, thus grammar should be updated.","component":"SonarJava","component_version":"1.3"}

@@ -1,0 +1,1 @@
+{"description":"This code will wronlgy generate an issue:\n{code}\n   eventBus.register((NextPlayer) event -\u003e isPlaying \u003d !isPlaying);\n{code}\n\nsource : http://sonarqube.15.x6.nabble.com/Assignment-within-sub-expression-rule-for-lambdas-td5029472.html\n","component":"SonarJava","component_version":"2.5.1"}

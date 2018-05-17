@@ -1,0 +1,1 @@
+{"description":"Type of method invocation is incorrect for methods returning an array : \n\n{code}\n\nint[] method() {\n}\n\nvoid foo() {\n   method().class;\n}\n\n{code}","component":"SonarJava","component_version":"2.6"}

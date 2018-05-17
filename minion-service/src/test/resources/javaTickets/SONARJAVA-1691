@@ -1,0 +1,1 @@
+{"description":"Methods annotated with unused parameters are usually using the annotation in combination of interceptors, which may use this parameter.\r\n\r\nIn order to avoid raising False Positives, unused parameters of annotated methods should be ignored.\r\n\r\nRSPEC should also be modified to mention the exclusion.","component":"SonarJava","component_version":"4.0"}

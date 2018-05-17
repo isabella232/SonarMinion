@@ -1,0 +1,1 @@
+{"description":"private void variadic(String first, Object... objects) {}\r\nprivate void variadic(String... strings) {}\r\n\r\nvariadic(\"\", \"\", \"\"); // should resolve to \u0027String...\u0027 and not \u0027String, Object...\u0027","component":"SonarJava","component_version":"3.6"}

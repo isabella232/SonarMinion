@@ -1,0 +1,1 @@
+{"description":"{code}\r\npackage org.foo;\r\n\r\nclass A {\r\n  void foo() {\r\n    org.foo.@MyAnnotation A a; // annotation not resolved\r\n  }\r\n}\r\n\r\n@Target(ElementType.TYPE_USE)\r\n@interface MyAnnotation { } // usage is empty\r\n{code}","component":"SonarJava","component_version":"4.8"}

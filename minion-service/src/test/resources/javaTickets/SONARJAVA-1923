@@ -1,0 +1,1 @@
+{"description":"The {{ExplodedGraphWalker}} is not consuming symbolic values related to dimension expressions from new array trees, resulting with stack polluted with extra values corresponding to these expressions.","component":"SonarJava","component_version":"4.3"}

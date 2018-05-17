@@ -1,0 +1,1 @@
+{"description":"{code}\r\n    while (foo()) {\r\n      try {\r\n        System.out.println(\"try\");\r\n        continue; // Next instruction should be the finally block but ends up being the loop condition.\r\n      } finally {\r\n        System.out.println(\"finally\");\r\n      }\r\n    }\r\n{code}","component":"SonarJava","component_version":"4.12"}

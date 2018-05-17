@@ -1,0 +1,1 @@
+{"description":"squid:S1231\nThe members of an interface declaration or class should appear in a pre-defined order\n\nShould be\nsquid:S1213\n\nThis will impact users\u0027 new issue reporting: old \"S1231\" issues will be closed, and new \"S1213\" issues will be added in their places","component":"SonarJava","component_version":"2.2"}

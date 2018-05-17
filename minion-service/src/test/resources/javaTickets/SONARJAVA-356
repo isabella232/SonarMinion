@@ -1,0 +1,1 @@
+{"description":"In the following case for instance, we don\u0027t expect to get one issue :\n\n{code}\n/**\n * ...\n *  @param toDomain\n */\n{code}","component":"SonarJava","component_version":"2.0"}

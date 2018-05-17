@@ -1,0 +1,1 @@
+{"description":"{code}\nthrow new NullPointerException\n(); // This was marked as noncompliant\n{code}\n\n{code}\nthrow new NullPointerException // But the problem actually is here\n();\n{code}","component":"SonarJava","component_version":"2.5"}

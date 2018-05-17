@@ -36,7 +36,7 @@ public class Qualifier {
   }
 
   public String qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
-    String jql = errorMessage.stream().map(e -> "text ~\"" + e.replace("\t", "\\t") + "\"").collect(Collectors.joining(" OR "));
+    String jql = errorMessage.stream().map(e -> "text ~\"" + escapeForJQL(e) + "\"").collect(Collectors.joining(" OR "));
     Promise<SearchResult> searchResultPromise = client.getSearchClient().searchJql(jql);
     SearchResult sr = searchResultPromise.claim();
     StringBuilder result = new StringBuilder();
@@ -52,5 +52,14 @@ public class Qualifier {
     result.append("\n");
     result.append("Errors found : " + errorMessage.stream().collect(Collectors.joining(",")));
     return result.toString();
+  }
+
+  private String escapeForJQL(String e) {
+    return e.replace("\t", "\\t")
+      .replace(":", "\\\\\\\\:")
+      .replace("[", "\\\\\\\\[")
+      .replace("]", "\\\\\\\\]")
+      .replace("~", "")
+      ;
   }
 }

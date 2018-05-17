@@ -1,0 +1,1 @@
+{"description":"When type of exception is unknown, the message of the issue should not contain{code}!unknownSymbol!{code}\r\n\r\n{code}\r\npublic void foo() throws IOException, UnknownException { // issue with UnknownException\r\n}\r\n{code}","component":"SonarJava","component_version":"3.10"}

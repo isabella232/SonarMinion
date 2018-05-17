@@ -1,0 +1,1 @@
+{"description":"False positive for the following case:\r\n{code}\r\nimport junit.framework.TestCase;\r\nimport org.junit.Test;\r\nclass Test extends TestCase {\r\n  @Test\r\n  public void test() {\r\n    assertEquals(true, true);\r\n  }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.6"}

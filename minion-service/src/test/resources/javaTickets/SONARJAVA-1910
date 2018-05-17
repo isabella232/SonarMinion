@@ -1,0 +1,1 @@
+{"description":"A small memory leak is created as the ParameterizedTypeJavatype is referencing statically the type substitution solver and thus it holds a lot of object in memory for every file analyzed","component":"SonarJava","component_version":"4.3"}

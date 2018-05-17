@@ -1,0 +1,1 @@
+{"description":"False positive raised for {{FooTest}}:\r\n{code}\r\n@org.testng.annotations.Test\r\npublic class FooTest {\r\n  public void test1() {\r\n  }\r\n\r\n  public void test2() {\r\n  }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.8"}

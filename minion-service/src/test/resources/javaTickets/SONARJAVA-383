@@ -1,0 +1,1 @@
+{"description":"In following case an issue is unexpectedly reported:\n\n{code}\ncase 5: {\n     doSomething();\n     break;\n  }\n{code}","component":"SonarJava","component_version":"2.0"}

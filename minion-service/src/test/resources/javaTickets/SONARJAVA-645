@@ -1,0 +1,1 @@
+{"description":"This should also work for anonymous classes created from EnumConstant : \n\n{code}\nenum MyEnum {\n  FOO { //Supertype of the anonymous class created for FOO should be MyEnum.\n    void fun(){}\n  };\n  void fun(){}\n}\n{code}","component":"SonarJava","component_version":"3.0"}

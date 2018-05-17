@@ -1,0 +1,1 @@
+{"description":"the following code trigger a ClassCastException:\r\n{code}\r\nmyUnknownCollectionOfObject.stream()\r\n.filter(s -\u003e mySetOfString.contains(s.toString())) // \u0027s.toString()\u0027 is unknown as type of s is not resolved\r\n.collect(Collectors.toSet());\r\n{code}","component":"SonarJava","component_version":"4.0"}

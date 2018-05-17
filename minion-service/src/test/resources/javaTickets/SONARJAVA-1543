@@ -1,0 +1,1 @@
+{"description":"Parsing of receiver type on inner class constructor should be supported, the following code is not parsed by the analyzer : \r\n{code}\r\npublic class Main {\r\n    class Inner {\r\n        Inner(Main Main.this) {\r\n        }\r\n    }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.12"}

@@ -1,0 +1,1 @@
+{"description":"S1220 should report issue on file rather than on compilation unit. Meaning that even empty files should be marked with issues.\n\nThe current reporting on compilation unit tree can lead to odd behaviour when file is empty.","component":"SonarJava","component_version":"3.2"}

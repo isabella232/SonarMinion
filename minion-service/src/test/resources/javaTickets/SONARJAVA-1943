@@ -1,0 +1,1 @@
+{"description":"The following code trigger a NPE\r\n{code}\r\nabstract class A {\r\n  void foo(java.util.Collection\u003cA\u003e objects) {\r\n    objects.stream().map(A::\u003cString\u003egetValue);\r\n  }\r\n\r\n  abstract \u003cT\u003e T getValue();\r\n}\r\n{code}","component":"SonarJava","component_version":"4.3"}

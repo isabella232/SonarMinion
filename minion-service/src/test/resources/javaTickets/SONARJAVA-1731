@@ -1,0 +1,1 @@
+{"description":"{code}\r\nsensorContext.\u003cT\u003enewMeasure()\r\n      .withValue(value)\r\n      .forMetric(metric)\r\n      .on(inputFile)\r\n      .save(); // First syntax token is identified as \u0027\u003c\u0027 character whereas it should be the first identifier\r\n{code}","component":"SonarJava","component_version":"4.0"}

@@ -1,0 +1,1 @@
+{"description":"{code}\npublic static void main(String[] args) {\n  try {\n    doMain(args);\n  } catch (EarlyTerminationException e) {\n    e.getUserMessage().stream().forEach(System.err::println);\n    System.exit(e.getExitCode()); //Should not raise issue\n  }\n}\n{code}\n\nDescription updated accordingly.","component":"SonarJava","component_version":"3.3"}

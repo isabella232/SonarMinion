@@ -1,0 +1,1 @@
+{"description":"In the case of Hibernate/JPA, fields representing columns can be used in conditions of HQL requests even if the field value is never accessed.\r\n\r\nFields annotated with {{@javax.persistence.Column}} should be ignored.\r\n\r\nMore generally any private field annotated should not raise an issue.\r\n\r\n","component":"SonarJava","component_version":"3.5"}

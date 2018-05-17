@@ -1,0 +1,1 @@
+{"description":"{code}\r\ntry ( FileInputStream in \u003d new FileInputStream( storageFile );\r\n      FileLock lock \u003d in.getChannel().lock(0, Long.MAX_VALUE, true) ) // FP\r\n{\r\n    // ... do something with \u0027in\u0027 (but not with \u0027lock\u0027)\r\n}\r\n{code}","component":"SonarJava","component_version":"3.14"}

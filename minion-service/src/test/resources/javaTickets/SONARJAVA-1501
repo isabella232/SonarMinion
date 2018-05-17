@@ -1,0 +1,1 @@
+{"description":"{code}\r\n  enum Foo {\r\n   FOO; //this should be flagged as static\r\n  }\r\n {code}\r\n","component":"SonarJava","component_version":"3.10"}

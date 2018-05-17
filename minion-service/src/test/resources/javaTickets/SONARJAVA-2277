@@ -1,0 +1,1 @@
+{"description":"{code}\nprivate class Used {}\nObject o \u003d new Used(); // Not counted as an usage of Used class.\nprivate interface IUsed {}\nObject o2 \u003d new IUsed() {}; // Not counted as an usage of IUsed interface.\n{code}","component":"SonarJava","component_version":"4.10"}

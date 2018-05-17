@@ -1,0 +1,1 @@
+{"description":"This rule raises false positives if you have a List in the Map. e.g.\r\n{code}\r\nprivate Map\u003cString, SomeSerializableObject\u003e map1; // no violations - OK\r\nprivate Map\u003cString, List\u003cSomeSerializableObject\u003e map2; // raises squid:S1948\r\n{code}","component":"SonarJava","component_version":"4.0"}

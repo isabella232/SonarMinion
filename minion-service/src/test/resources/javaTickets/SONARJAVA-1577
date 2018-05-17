@@ -1,0 +1,1 @@
+{"description":"The type of the \".class\" expressions should be parameterized types of class, instead of the raw type class.\r\n\r\n{code}\r\nCurrent: A.class --\u003e Type \u003d Class\r\nCorrect: A.class --\u003e Type \u003d Class\u003cA\u003e\r\n{code}","component":"SonarJava","component_version":"3.12"}

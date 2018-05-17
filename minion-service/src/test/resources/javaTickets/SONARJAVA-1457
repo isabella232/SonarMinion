@@ -1,0 +1,1 @@
+{"description":"{code}\r\ndouble v \u003d 7.4d;\r\ndouble remainder \u003d v % 1; //remainder is 0.4 (approximated) so no issue should be raised here.\r\n{code}","component":"SonarJava","component_version":"3.10"}

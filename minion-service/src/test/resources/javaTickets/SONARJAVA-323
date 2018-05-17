@@ -1,0 +1,1 @@
+{"description":"For example currently NPE in visitor won\u0027t be shown in log, if file can\u0027t be parsed - see [^npe-log.txt]. This problem comes from https://github.com/SonarSource/sonar-java/blob/04fc78395abbf893a885ab9bb0eca098c34a8e99/java-squid/src/main/java/org/sonar/java/ast/AstScanner.java#L128","component":"SonarJava","component_version":"1.5"}

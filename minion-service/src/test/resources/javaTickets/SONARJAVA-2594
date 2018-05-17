@@ -1,0 +1,1 @@
+{"description":"When method invocation throws the exception which is not catched we should enqueue exit block with exception on the top of the stack to create exceptional yield. Currently no yield is created for such method.","component":"SonarJava","component_version":"5.0.1"}

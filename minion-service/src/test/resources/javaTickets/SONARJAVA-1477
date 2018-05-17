@@ -1,0 +1,1 @@
+{"description":"{code}\r\npublic class JUnit3FalsePositiveTest extends TestCase {\r\n    public void testNothing() {\r\n        assertTrue(true);\r\n    }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.10"}

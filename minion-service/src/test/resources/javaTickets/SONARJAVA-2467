@@ -1,0 +1,1 @@
+{"description":"When type of the exception is not resolved we should not show \u0027uknownSymbol\u0027 as a name of the exception but rather generic \u0027Exception\u0027\r\n\r\n","component":"SonarJava","component_version":"4.14"}

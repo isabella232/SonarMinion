@@ -31,7 +31,7 @@ public class AnalyzerTest {
   @Test
   public void test_returned_message() {
     String answer = analyzer.analyze("{description:\"foo\"}");
-    assertThat(answer).isEqualTo("Seems like there isno product nor version in your question, could you clarify this information ?");
+    assertThat(answer).isEqualTo("Seems like there is no product nor version in your question, could you clarify this information ?");
 
     // version in message
     answer = analyzer.analyze("{description:\"foo 6.2\"}");

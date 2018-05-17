@@ -1,0 +1,1 @@
+{"description":"Currently we able to parse:\n\n{code}\nvoid method() throws MyException\u003cTypeArgument\u003e {\n}\n{code}\n\n{code}\ntry {\n} catch (MyException\u003cTypeArgument\u003e e) {\n}\n{code}\n\nwhereas should not, thus grammar should be updated.\n","component":"SonarJava","component_version":"1.3"}

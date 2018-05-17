@@ -1,0 +1,1 @@
+{"description":"The SuppressWarning issue filter don\u0027t handle issue when raised by other plugins that the java plugin.","component":"SonarJava","component_version":"4.0"}

@@ -1,0 +1,1 @@
+{"description":"Construction such as : \n\n{code}\nmyMethod().myMethod()::size\nnew MyClass(3).myMethod()::size\n{code}\n\ncauses a parsing error","component":"SonarJava","component_version":"2.4"}

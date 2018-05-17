@@ -1,0 +1,1 @@
+{"description":"Operand order in instructions comparing with zero {{IFEQ, IFNE, IFLT, IFLE, IFGT, IFGE}} is inversed, zero should be on the rhs of created relational symbolic value.","component":"SonarJava","component_version":"5.0.1"}

@@ -1,0 +1,1 @@
+{"description":"{code}\nint i;\nint foo() {\n return i++; //FP issue for S881\n}\nint bar() {\n return ++i; //FP issue for S881\n}\n{code}\nMoreover, the first return statement will be detected by RSPEC-2123.","component":"SonarJava","component_version":"3.0"}

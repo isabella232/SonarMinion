@@ -1,0 +1,1 @@
+{"description":"{code}\nClass\u003c? extends A\u003e foo(){\n      return A.class;\n    }\n{code}\n\nsource http://sonarqube.15.x6.nabble.com/S1452-and-class-literals-td5030320.html","component":"SonarJava","component_version":"2.9.1"}

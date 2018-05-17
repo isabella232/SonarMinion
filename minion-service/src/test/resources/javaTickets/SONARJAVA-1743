@@ -1,0 +1,1 @@
+{"description":"{code}\r\nclass RawTypeBound\u003cC extends Comparable\u003e {\r\n  C field;\r\n  \u003cS extends Comparable\u003c?\u003e\u003e void meth(S s){\r\n    meth(field); // field is acceptable parameter as a subtype of S because it is bounded by the raw type\r\n  }\r\n}\r\n{code}","component":"SonarJava","component_version":"4.0"}

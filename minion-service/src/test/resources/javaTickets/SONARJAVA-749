@@ -1,0 +1,1 @@
+{"description":"When setting a relative path containing parent link in sonar.java.libraries, the path is not resolved properly.\n\n{code}\nsonar.java.libraries\u003d../../lib/*.jar\n{code}","component":"SonarJava","component_version":"2.5.1"}

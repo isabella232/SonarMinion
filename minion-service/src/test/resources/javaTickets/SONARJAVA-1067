@@ -1,0 +1,1 @@
+{"description":"When searching for the owner of \"{{foo}}\", a NPE is thrown, as the owner of an unknown symbol is currently set to null.\n\nReproducer:\n{code}class D extends Thread {\n  \n  @Override\n  public void run() {\n    foo();\n  }\n  \n}{code}","component":"SonarJava","component_version":"3.3"}

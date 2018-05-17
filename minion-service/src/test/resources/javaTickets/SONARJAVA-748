@@ -1,0 +1,1 @@
+{"description":"When creating and serializing DSM the dependencies between files within the same directory are not shown. ","component":"SonarJava","component_version":"2.5.1"}

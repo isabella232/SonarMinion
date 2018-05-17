@@ -1,0 +1,1 @@
+{"description":"{code}\r\nclass A\u003cT\u003e {}\r\nclass B\u003cU\u003e extends A\u003cU\u003e {}\r\nclass Test {\r\n    B\u003cString\u003e b;\r\n    \u003cS\u003e S foo(A\u003cS\u003e a) {\r\n          foo(b); // should be resolved with infered substitution S -\u003e String\r\n     }\r\n}\r\n{code}","component":"SonarJava","component_version":"4.0"}

@@ -1,0 +1,1 @@
+{"description":"Serialization of enum behaves in a special as described per java documentation. As such this rule should ignore them.  \n\nhttps://docs.oracle.com/javase/1.5.0/docs/guide/serialization/spec/serial-arch.html#enum\n\nhttp://docs.oracle.com/javase/8/docs/platform/serialization/spec/serial-arch.html#a6469","component":"SonarJava","component_version":"3.11"}

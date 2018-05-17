@@ -1,0 +1,1 @@
+{"description":"If you override a protected method to make it public, you\u0027ll simply forward the call to the super method.\n\nIn this use case, the overriding method is not useless and cannot simply be removed.","component":"SonarJava","component_version":""}

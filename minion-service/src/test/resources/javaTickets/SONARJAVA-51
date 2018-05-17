@@ -1,0 +1,1 @@
+{"description":"Log is attached.\nHello.java \u003d\u003e taken into account as expected\nHello.notjava \u003d\u003e taken into account but shouldn\u0027t be\nHello.notjavazz \u003d\u003e not taken into account as expected","component":"SonarJava","component_version":"1.2"}

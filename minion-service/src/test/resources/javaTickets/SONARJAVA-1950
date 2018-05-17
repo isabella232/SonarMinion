@@ -1,0 +1,1 @@
+{"description":"if the list of number contains spaces (like \"-1, 0, 1, 2, 3, 4, 10, 100, 1000\") then a number format exception can be thrown as the string is not trimmed before split.","component":"SonarJava","component_version":"4.3"}

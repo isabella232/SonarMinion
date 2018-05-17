@@ -1,0 +1,1 @@
+{"description":"Rework of method invocation argument order broke the handling of {{Objects.requireNonNull(...)}}","component":"SonarJava","component_version":"4.3"}

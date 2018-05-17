@@ -1,0 +1,1 @@
+{"description":"When having multiple conditional operators in a method chained call this can raise a false positive.\r\n\r\n{code}\r\nfoo( true ? true:false).foo( true ? true:false).foo( true ? true:false).foo( true ? true:false).foo( true ? true:false); //false positive\r\n{code}","component":"SonarJava","component_version":""}

@@ -1,0 +1,1 @@
+{"description":"When pattern contains only {{Y}} character rule fails with java.lang.StringIndexOutOfBoundsException\r\n\r\n{code}\r\nString result \u003d new SimpleDateFormat(\"YYYY\").format(date);\r\n{code}","component":"SonarJava","component_version":"4.11"}

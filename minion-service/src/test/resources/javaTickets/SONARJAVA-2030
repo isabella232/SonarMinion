@@ -1,0 +1,1 @@
+{"description":"In order to keep coverage per tests working with the new {{reportPaths}} property, the merging of JaCoCo reports should preserve the order of session and execution data. ","component":"SonarJava","component_version":"4.4"}

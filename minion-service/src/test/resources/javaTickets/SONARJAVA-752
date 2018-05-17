@@ -1,0 +1,1 @@
+{"description":"{code}\nclass A {\n   public static class B {}\n   private static int B;\n}\n{code}\n{code}\nimport static A.B;\nclass C{\n...\n{code}\n\nThe resolution of static import in class C will check the accessibility of field B and fail with a NPE because no enclosing class is available during resolution of import.","component":"SonarJava","component_version":"2.5.1"}

@@ -1,0 +1,1 @@
+{"description":"See http://stackoverflow.com/questions/28640952/why-does-sonarqube-consider-int-not-serializable.\n{noformat}\n// should not raise an issue\nprivate int[] field;\n{noformat}\n","component":"SonarJava","component_version":"3.0"}

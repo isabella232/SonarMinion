@@ -1,0 +1,1 @@
+{"description":"The following getter is not recognized as being a getter:\r\n\r\n{code}\r\npublic class Sample {\r\n\r\n  private Boolean active;\r\n\r\n  public Boolean isActive() { // undocumented public accessor\r\n    return active;\r\n  }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.14"}

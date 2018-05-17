@@ -1,0 +1,1 @@
+{"description":"Construction such as \n{code}\nvoid method(String a[]){}\n{code}\n\nresults in wrong type node for parameter of method. The dim on variable name are not taken into account.\n\n","component":"SonarJava","component_version":"2.5"}

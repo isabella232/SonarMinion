@@ -1,0 +1,1 @@
+{"description":"Issues are reported on block rather than on previous statement : \n\n{code}\nfinally //issue reported before migration\n{ \n}\n{code}\n{code}\nfinally\n{  //issue reported after migration\n}\n{code}","component":"SonarJava","component_version":"2.5"}

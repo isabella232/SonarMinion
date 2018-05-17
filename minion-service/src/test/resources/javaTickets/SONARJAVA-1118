@@ -1,0 +1,1 @@
+{"description":"The following code should raise an issue:\r\n\r\n{code}\r\nclass MyClass {\r\n  public enum COLOR {\r\n    RED, GREEN, BLUE, ORANGE;\r\n  }\r\n\r\n  void foo() { \r\n    Map\u003cCOLOR, String\u003e map;\r\n    map \u003d new HashMap\u003c\u003e(); // Noncompliant\r\n  }\r\n{code}","component":"SonarJava","component_version":"3.4"}

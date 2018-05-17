@@ -1,0 +1,1 @@
+{"description":"According to [RSPEC-1805|http://jira.sonarsource.com/browse/RSPEC-1805] methods which override other methods should be excluded:\n{code}\nclass Example {\n  // overrides java.lang.Object#equals(Object) :\n  public boolean equals(Object obj) {\n    return false;\n  }\n}\n{code}","component":"SonarJava","component_version":"2.4"}

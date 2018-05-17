@@ -1,0 +1,1 @@
+{"description":"For every lambda in java 8, an issue is raised on rule : Unused Private Method. \n\n{code}\n    new MyClass(3).myMethod((y,z)-\u003ey*z);\n    new MyClass(3).myMethod((y,z)-\u003ey+z);\n{code}","component":"SonarJava","component_version":"2.3"}

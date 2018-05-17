@@ -1,0 +1,1 @@
+{"description":"As checks report issue on class and not via instances, when multiple instances of a custom unclosed resource are instantiated, issues will be duplicated. ","component":"SonarJava","component_version":"3.13"}

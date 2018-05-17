@@ -1,0 +1,1 @@
+{"description":"In order to support multi-module project with module that contains only test or be with packaging pom, the sonar.java.binaries property should not match obligatory existing files when the source files is empty.\n\nThe problem arise when the version of the sonar-maven-plugin is prior to (including) 2.2","component":"SonarJava","component_version":"2.9.1"}

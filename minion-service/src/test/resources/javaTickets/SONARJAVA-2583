@@ -1,0 +1,1 @@
+{"description":"{code}\r\nclass Foo\u003cT\u003e {\r\n  void wrapUp(T[] params) {\r\n\r\n  }\r\n}\r\nclass Bar extends Foo\u003cString\u003e {\r\n  void wrapUp(String[] params) { // Will trigger FP on S2177 because the substitution does not come into play and method is considered overload not override.\r\n\r\n  }\r\n}\r\n{code}","component":"SonarJava","component_version":""}

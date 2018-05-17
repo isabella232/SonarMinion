@@ -1,0 +1,1 @@
+{"description":"In case of autoboxing an issue is raised : \n\n{code}\nInteger line;\nif(line \u003d\u003d 0) {}\n{code}","component":"SonarJava","component_version":"2.4"}

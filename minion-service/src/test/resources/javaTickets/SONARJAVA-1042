@@ -1,0 +1,1 @@
+{"description":"Code snippets from the description are written in VB.\n\nMoreover the description doesn\u0027t seem to match the behavior of this rule on Nemo. The description talks about invariant expression whereas the implementation is about updating the loop counter.","component":"SonarJava","component_version":"3.3"}

@@ -1,0 +1,1 @@
+{"description":"The following syntax:\n\n{code}\n(Foo \u0026 Bar)someVariable\n{code}\n\nwill yield a type cast node, but to a type consisting exclusively of \"Foo\", ignoring \"Bar\" altogether.","component":"SonarJava","component_version":""}

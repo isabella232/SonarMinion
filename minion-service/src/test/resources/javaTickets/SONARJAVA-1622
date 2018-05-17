@@ -1,0 +1,1 @@
+{"description":"{code} \r\nverify(issueService).assign(\"ABC\", \"perceval\"); // false positive as assign method is \u0027wrongly\u0027 interpreted as the \u0027as\u0027 method of fest assert\r\n{code}\r\n\r\n\r\n","component":"SonarJava","component_version":"3.13"}

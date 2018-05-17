@@ -1,0 +1,1 @@
+{"description":"This is due to the fact that internally, the key used to identify each source file is relative from the source directory and not relative from the project root directory.","component":"SonarJava","component_version":""}

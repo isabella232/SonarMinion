@@ -1,0 +1,1 @@
+{"description":"From SONARJAVA-1373 comment:\r\n{noformat}\r\n@org.testng.annotations.Test(groups \u003d\"integration\")\r\npublic abstract class AbstractIntegrationTest{\r\n}\r\n{noformat}","component":"SonarJava","component_version":"3.9"}

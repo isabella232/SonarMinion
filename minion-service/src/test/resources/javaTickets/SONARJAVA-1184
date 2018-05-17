@@ -1,0 +1,1 @@
+{"description":"Dependencies are computed with a wrong value, adding +1 for each dependency. ","component":"SonarJava","component_version":""}

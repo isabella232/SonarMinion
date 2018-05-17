@@ -1,0 +1,1 @@
+{"description":"https://github.com/SonarSource/sonar-java/blob/master/java-checks/src/main/java/org/sonar/java/checks/MagicNumberCheck.java#L72 \r\n\r\nThis, in case of german locale for instance will interpret 1.0d as 10 and so raise an issue where it is not expected.","component":"SonarJava","component_version":"3.5"}

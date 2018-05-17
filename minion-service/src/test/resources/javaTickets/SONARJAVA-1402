@@ -1,0 +1,1 @@
+{"description":"Primitive wrappers are not handled correctly.\r\n\r\n{code}\r\npublic class MyClass {\r\n  private Integer a \u003d 0; // raise an issue, but default value of primitive wrappers is null.\r\n  private Integer b \u003d null; // should be non-compliant\r\n}\r\n{code}","component":"SonarJava","component_version":"3.9"}

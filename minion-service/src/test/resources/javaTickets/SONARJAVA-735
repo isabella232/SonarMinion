@@ -1,0 +1,1 @@
+{"description":"{code}\n@Annotation(param\u003d\"value\") //raise issue because this param is considered as a reassignement of method parameter.\nvoid foo(String param) {}\n{code}","component":"SonarJava","component_version":"2.8"}

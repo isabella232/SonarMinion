@@ -1,0 +1,1 @@
+{"description":"when computing inner class name, it might happen (in the case of obfuscation for instance) that the inner class does not contains the enclosing class name. \r\n\r\nThe analysis should not fail in such cases.","component":"SonarJava","component_version":"4.2"}

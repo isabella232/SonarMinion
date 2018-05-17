@@ -1,0 +1,1 @@
+{"description":"During bytecode analysis, if an unused constructor has a null signature as per ASM signature, a NPE is raised when trying to read the parameters of that constructor.","component":"SonarJava","component_version":"2.5.1"}

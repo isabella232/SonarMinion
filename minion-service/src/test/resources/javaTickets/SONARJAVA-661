@@ -1,0 +1,1 @@
+{"description":"{code}\n    while(true){// Raising issue whereas it should not.\n      for (int i \u003d 0; i \u003c 42; i++) {\n        continue;\n      }\n      break;\n    }\n{code}","component":"SonarJava","component_version":"2.5"}

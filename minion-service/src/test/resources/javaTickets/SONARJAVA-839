@@ -1,0 +1,1 @@
+{"description":"{code}\nclass A {\npublic final String s; //should not raise an issue.\n}\n{code}\n\nsource : http://sonarqube.15.x6.nabble.com/Suggestion-regarding-squid-ClassVariableVisibilityCheck-td5031175.html\n\n","component":"SonarJava","component_version":"3.3"}

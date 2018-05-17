@@ -1,0 +1,1 @@
+{"description":"The following code trigger a NPE in TypeAndReferenceSolver when inferring types:\r\n\r\n{code}\r\njava.util.Optional.of(null).orElseGet(java.util.Collections::emptyList);\r\n{code}","component":"SonarJava","component_version":"4.5"}

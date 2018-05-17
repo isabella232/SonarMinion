@@ -1,0 +1,1 @@
+{"description":"Currently an issue is raised for:\r\n{code}\r\npublic abstract class Metric {\r\n    public abstract double getValue();\r\n\r\n    @Override\r\n    public String toString() {\r\n        return getClass().getName() + \": \" + getValue();\r\n    }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.10"}

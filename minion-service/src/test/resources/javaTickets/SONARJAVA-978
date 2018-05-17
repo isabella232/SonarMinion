@@ -1,0 +1,1 @@
+{"description":"Nested conditional operators parentheses are not useless as they improve readability: \n\n{code}\nreturn measure.hasBooleanValue() ? (measure.getBooleanValue() ? 1.0d : 0.0d) : null;\n{code}","component":"SonarJava","component_version":"3.4"}

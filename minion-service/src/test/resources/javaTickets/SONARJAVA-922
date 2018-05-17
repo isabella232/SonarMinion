@@ -1,0 +1,1 @@
+{"description":"{code}\nclass A {\n   String foo() {\n     return super.toString(); //unresolved, super is unknown in this case whereas it should be of type object.\n   }\n}\n{code}","component":"SonarJava","component_version":"3.1"}

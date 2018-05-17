@@ -1,0 +1,1 @@
+{"description":"{code}\r\nClass A\u003cT\u003e  {\r\n  void foo(List\u003c? extends T\u003e list)  {\r\n  }\r\n\r\n  void bar() {\r\n    new A\u003cString\u003e().foo(new List\u003cString\u003e()); // substitution of T by String should be handled correctly\r\n  }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.12"}

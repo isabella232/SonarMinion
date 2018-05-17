@@ -1,0 +1,1 @@
+{"description":"With regards to RSPEC-2184, what is true for {{int}} is true for {{long}} when casting to {{float}} or {{double}}.\r\nFollowing code should trigger the rule, but doesn\u0027t:\r\n{code}\r\nfloat f \u003d 4l / 3; \r\n{code}","component":"SonarJava","component_version":"4.3"}

@@ -1,0 +1,1 @@
+{"description":"Nested ifs cause an exponential number of paths to be checked, leading to resource exhaustion and timeout.\n{code}\nif(a || b)\n  if(c || d)\n    ....\n      if(e || f)\n        ...\n{code}\n\nNested loops and conditional expressions can potentially also trigger this behaviour.","component":"SonarJava","component_version":"3.4"}

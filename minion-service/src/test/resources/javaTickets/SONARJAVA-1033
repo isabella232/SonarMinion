@@ -1,0 +1,1 @@
+{"description":"Ternary operators are currently not supported.\n\nkeepDatabase is false, whereas it should be unknown.\n{code}\nboolean keepDatabase \u003d StringUtils.isNotBlank(value) ? Boolean.valueOf(value) : false;\n{code}","component":"SonarJava","component_version":""}

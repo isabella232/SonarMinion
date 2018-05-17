@@ -1,0 +1,1 @@
+{"description":"The erasure of the following type variable {{X}} should be the raw type {{Comparable}}, and not the parameterized type {{Comparable\u003cX\u003e}}\r\n\r\n{code}\r\nClass A\u003cX extends Comparable\u003cX\u003e\u003e {}\r\n{code}","component":"SonarJava","component_version":"3.11"}

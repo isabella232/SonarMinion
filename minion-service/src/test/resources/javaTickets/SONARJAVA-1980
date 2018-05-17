@@ -1,0 +1,1 @@
+{"description":"{code}\r\nvoid foo(Object a) {\r\n   if(a\u003d\u003dnull) ; // condition wrongly highlighted\r\n   Object b \u003d null;\r\n   b.toString(); // Noncompliant because b has the null literal value.\r\n}\r\n{code}","component":"SonarJava","component_version":"4.3"}

@@ -1,0 +1,1 @@
+{"description":"The following code raise a NPE.\r\n\r\n{code}\r\n    @Nonnull\r\n    public void registerIncorrectLoginAttempt(String userName) {\r\n        User user \u003d getUser(userName);\r\n        if (user \u003d\u003d null){\r\n            return;\r\n        }\r\n    }\r\n{code}","component":"SonarJava","component_version":"3.14"}

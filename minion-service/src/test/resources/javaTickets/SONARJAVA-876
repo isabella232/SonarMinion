@@ -1,0 +1,1 @@
+{"description":"Method reference should have a defined type (even if unknown) during type resolution because some resolution need to rely on type of method reference expression (which should be the return type of the refered method).  ","component":"SonarJava","component_version":"2.9.1"}

@@ -1,0 +1,1 @@
+{"description":"Reproducer:\r\n{code}\r\nclass NPE {\r\n  void foo() {\r\n    Object o \u003d new Object() {\r\n      private static final long serialVersionUID \u003d 1L;\r\n    };\r\n  }\r\n}\r\n{code}","component":"SonarJava","component_version":"3.10"}

@@ -1,0 +1,1 @@
+{"description":"Flows that contains only the issue location are redundant and should discarded.\r\nSee screenshot.\r\n","component":"SonarJava","component_version":"4.10"}

@@ -1,0 +1,1 @@
+{"description":"To reproduce:\n\n{code}\nclass Foo extends Foo {\n  Sometype foo() {\n  }\n}\n{code}","component":"SonarJava","component_version":"2.1"}

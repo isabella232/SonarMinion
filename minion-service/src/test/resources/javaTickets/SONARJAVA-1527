@@ -1,0 +1,1 @@
+{"description":"We check for null checks of readline that are discarded but this raises issues in the corner case in attached file.","component":"SonarJava","component_version":""}

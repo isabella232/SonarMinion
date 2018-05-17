@@ -1,0 +1,1 @@
+{"description":"Reproducer : \n\n{code}\n@java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME)\n  @Target(ElementType.METHOD)\n  public @interface Expose {}\n  private void addMethod(Class\u003cT\u003e c) {\n    Expose annotation \u003d c.isAnnotationPresent(Expose.class);\n  }\n{code}","component":"SonarJava","component_version":"3.1"}
