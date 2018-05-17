@@ -19,8 +19,16 @@ public class AnalyzerTest {
 
   @Test
   public void test_returned_message() {
-    String result = new Analyzer().analyze("{description:\"foo\"}");
-    assertThat(result).isEqualTo("message analyzed : foo");
+    Analyzer analyzer = new Analyzer();
+    String answer = analyzer.analyze("{description:\"foo\"}");
+    assertThat(answer).isEqualTo("There seems to be no product nor version in your question, could you precise those information ?");
+
+    // version in message
+    answer = analyzer.analyze("{description:\"foo 6.2\"}");
+    assertThat(answer).isEqualTo("Could you precise which component of the SonarQube ecosystem your question is about ?");
+
+    answer = analyzer.analyze("{description:\"foo 6.2\", component:\"plop\"}");
+    assertThat(answer).isEqualTo("Your question seems related to SONAR-42");
   }
 
   @Test
@@ -32,12 +40,12 @@ public class AnalyzerTest {
       {"300.000", "2.264.000"}
     };
 
+    Analyzer analyzer = new Analyzer();
     for (int i = 1; i <= 4; i++) {
       File file = new File("src/test/resources/message-" + i + "-Jira.txt");
       String content = Files.readAllLines(file.toPath()).stream().collect(Collectors.joining("\n"));
       Analyzer.Message message = new Gson().fromJson(content, Analyzer.Message.class);
-      assertThat(new Analyzer().analyze(content)).isEqualTo("message analyzed : "+message.description);
-      assertThat(new Analyzer().getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
+      assertThat(analyzer.getVersions(message.description)).containsExactlyInAnyOrder(expected[i-1]);
     }
   }
 }

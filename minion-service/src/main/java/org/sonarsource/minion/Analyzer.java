@@ -10,6 +10,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class Analyzer {
   private static final Pattern VERSION_REGEX = Pattern.compile("\\d+\\.\\d+(\\.\\d+)*");
@@ -18,12 +19,21 @@ public class Analyzer {
     String description;
     String component;
     String component_version;
-
   }
 
   public String analyze(String json) {
     Message message = new Gson().fromJson(json, Message.class);
-    return "message analyzed : "+message.description;
+    if(message.component_version == null || message.component_version.isEmpty()) {
+      Set<String> versions = getVersions(message.description);
+      if(versions.isEmpty()) {
+        return "There seems to be no product nor version in your question, could you precise those information ?";
+      }
+      message.component_version = versions.stream().collect(Collectors.joining(","));
+    }
+    if(message.component == null || message.component.isEmpty()) {
+      return "Could you precise which component of the SonarQube ecosystem your question is about ?";
+    }
+    return "Your question seems related to SONAR-42";
   }
 
   Set<String> getVersions(String message) {
