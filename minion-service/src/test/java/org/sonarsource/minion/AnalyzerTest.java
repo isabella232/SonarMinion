@@ -9,8 +9,6 @@ import com.google.gson.Gson;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -28,7 +26,7 @@ public class AnalyzerTest {
 
   private static final Gson GSON = new Gson();
 
-  private Analyzer analyzer = new Analyzer(new FakeQualifier(), new FakeInputConnector());
+  private Analyzer analyzer = new Analyzer(new FakeQualifier(), new CachedJiraInputConnector());
 
   @Test
   public void test_returned_message() {
@@ -159,7 +157,7 @@ public class AnalyzerTest {
   @Test
   public void test_sd_input1_with_jira_request() throws IOException {
     File file = new File("src/test/resources/servicedesk/input1.json");
-    Analyzer analyzer = new Analyzer(new Qualifier(), new JiraInputConnector());
+    Analyzer analyzer = new Analyzer(new Qualifier(), new CachedJiraInputConnector());
 
     String message = analyzer.analyze(getContent(file));
 
@@ -173,21 +171,4 @@ public class AnalyzerTest {
     }
   }
 
-  private static final class FakeInputConnector implements InputConnector {
-    @Override
-    public Collection<String> findProducts() {
-      return asList("SonarCOBOL", "SonarQube");
-    }
-
-    @Override
-    public Collection<String> findSortedVersions(String productName) {
-      if (productName.equals("SonarCOBOL")) {
-        return asList("4.0.2", "4.2");
-      }
-      if (productName.equals("SonarQube")) {
-        return asList("7.0", "7.1");
-      }
-      return Collections.emptyList();
-    }
-  }
 }

@@ -52,6 +52,10 @@ public class JiraInputConnector implements InputConnector {
     return projectsByName.keySet();
   }
 
+  public Collection<Project> findProjects() {
+    return projectsByName.values();
+  }
+
   @Override
   public Collection<String> findSortedVersions(String productName) {
     Project project = projectsByName.get(productName);
@@ -61,7 +65,7 @@ public class JiraInputConnector implements InputConnector {
     return project.getSortedVersions();
   }
 
-  private static class Project {
+  static class Project {
     private final String key;
     private final String name;
     private final Set<String> versions;
