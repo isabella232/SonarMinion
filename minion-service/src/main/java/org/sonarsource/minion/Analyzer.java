@@ -34,7 +34,7 @@ public class Analyzer {
     if(message.component == null || message.component.isEmpty()) {
       return "Could you precise which component of the SonarQube ecosystem your question is about ?";
     }
-    return "Your question seems related to SONAR-42";
+    return new Qualifier().qualify(getErrorMessages(message.description), message.component, message.component_version);
   }
 
   Set<String> getVersions(String message) {
