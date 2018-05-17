@@ -110,7 +110,7 @@ public class AnalyzerTest {
   @Test
   public void errorMessage() throws IOException {
     String[][] expected = new String[][]{
-      {"Caused by: java.lang.UnsupportedOperationException: a measure can be set only once for a specific Component (key=net.lidl:imagereader:BRANCH:feature-12345), Metric (key=skipped_tests). Use update method \tat "},
+      {"Caused by: java.lang.UnsupportedOperationException: a measure can be set only once for a specific Component (key=net.lidl:imagereader:BRANCH:feature-12345), Metric (key=skipped_tests). Use update method\nat "},
       {},
       {},
       {},
