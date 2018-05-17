@@ -1,5 +1,7 @@
 SonarMinion
 ===========
+[![Build Status](https://travis-ci.org/SonarSource/SonarMinion.svg?branch=master)](https://travis-ci.org/SonarSource/SonarMinion)
 
 
-{"description": "blabla", "component": "SonarQube", "component_version": "6.7"}
+`curl -d '{"description":foo, "component":"SonarQube", "component_version":"v1"}' "https://sonar-minion.herokuapp.com/analyze"`
+
