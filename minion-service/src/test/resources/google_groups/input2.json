@@ -1,0 +1,5 @@
+{
+  "description" : "Hi,\r\n\r\nI'm trying to troubleshoot an issue using the \"Publish Quality Gate Result\" step from TFS (on-site).\r\nWe've been using the code analysis for a while now with no issues.\r\n\r\nThe error is showing up on the \"Prepare analysis on SonarQube\" step.\r\n\r\n2018-05-16T15:38:47.4448709Z ##[error][SQ] Could not fetch metrics\r\n2018-05-16T15:38:47.4448709Z ##[error][SQ] API GET '\/api\/metrics\/search' failed, error was: {\"code\":\"UNABLE_TO_GET_ISSUER_CERT_LOCALLY\"}\r\n2018-05-16T15:38:51.6451219Z ##[error][SQ] API GET '\/api\/ce\/task' failed, error was: {\"code\":\"UNABLE_TO_GET_ISSUER_CERT_LOCALLY\"}\r\n\r\nThe \"Prepare analysis on SonarQube\" and \"Run Code Analysis\" steps run without issue.\r\n\r\nWe do have internal CA certs on TFS and Sonarqube, so I'm having some trouble figuring out who is making request and what CA's might need to be updated.\r\n\r\nGoogleing the message is mostly returning node and git results, which don't seem to apply.\r\n\r\nAny help would be appreciated!\r\n\r\nThanks,\r\nBen",
+  "component" : "",
+  "component_version" : ""
+}
