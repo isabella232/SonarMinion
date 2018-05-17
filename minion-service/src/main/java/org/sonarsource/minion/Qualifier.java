@@ -5,11 +5,12 @@
  */
 package org.sonarsource.minion;
 
+import java.util.Map;
 import java.util.Set;
 
 public class Qualifier {
 
-  public String qualify(Set<String> errorMessage, String component, String version) {
+  public String qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
     return "Your question seems related to SONAR-42";
   }
 }

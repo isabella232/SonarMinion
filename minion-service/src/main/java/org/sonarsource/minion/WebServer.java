@@ -18,13 +18,15 @@ public class WebServer {
 
   private static final Logger LOGGER = LoggerFactory.getLogger(WebServer.class);
 
+  private final Analyzer analyzer = new Analyzer();
+
   public void start() {
     port(PORT);
     LOGGER.info("Listening on port {}", PORT);
 
     post("/analyze", (request, response) -> {
       String message = request.body();
-      return new Analyzer().analyze(message);
+      return analyzer.analyze(message);
     });
   }
 

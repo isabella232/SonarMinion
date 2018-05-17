@@ -13,6 +13,8 @@ import java.nio.file.Files;
 import java.util.stream.Collectors;
 import org.junit.Test;
 
+import static java.util.Arrays.asList;
+import static java.util.Collections.singletonList;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AnalyzerTest {
@@ -116,5 +118,15 @@ public class AnalyzerTest {
       Analyzer.Message message = getMessage("src/test/resources/servicedesk/input" + i + ".json");
       assertThat(new Analyzer().getErrorMessages(message.description)).containsExactlyInAnyOrder(expected[i-1]);
     }
+  }
+
+  @Test
+  public void test_get_version() {
+    Analyzer analyzer = new Analyzer();
+
+    assertThat(analyzer.getVersion("SonarCOBOL", asList("3.9", "4.2"))).isEqualTo("4.2");
+    assertThat(analyzer.getVersion("SonarCOBOL", asList("4.0.2", "4.2"))).isEqualTo("4.2");
+    assertThat(analyzer.getVersion("SonarCOBOL", singletonList("3.9"))).isNull();
+    assertThat(analyzer.getVersion("unknown", singletonList("3.9"))).isNull();
   }
 }

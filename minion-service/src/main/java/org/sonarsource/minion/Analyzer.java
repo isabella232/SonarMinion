@@ -6,15 +6,22 @@
 package org.sonarsource.minion;
 
 import com.google.gson.Gson;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
+import java.util.function.Function;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class Analyzer {
   private static final Pattern VERSION_REGEX = Pattern.compile("\\d+\\.\\d+(\\.\\d+)*");
+
+  private UpdateCenter updateCenter = new UpdateCenter();
 
   public static class Message {
     String description;
@@ -24,30 +31,38 @@ public class Analyzer {
 
   public String analyze(String json) {
     Message message = new Gson().fromJson(json, Message.class);
-    if(message.component_version == null || message.component_version.isEmpty()) {
-      Set<String> versions = getVersions(message.description);
-      if(versions.isEmpty()) {
+    Set<String> versions = new HashSet<>();
+    Set<String> products = new HashSet<>();
+    if (message.component_version == null || message.component_version.isEmpty()) {
+      versions = getVersions(message.description);
+      if (versions.isEmpty()) {
         return "There seems to be no product nor version in your question, could you precise those information ?";
       }
-      message.component_version = versions.stream().collect(Collectors.joining(","));
+    } else {
+      versions.add(message.component_version);
     }
-    if(message.component == null || message.component.isEmpty()) {
-      return "Could you precise which component of the SonarQube ecosystem your question is about ?";
+    if (message.component == null || message.component.isEmpty()) {
+      products = getProducts(message.description);
+      if (products.isEmpty()) {
+        return "Could you precise which component of the SonarQube ecosystem your question is about ?";
+      }
+    } else {
+      products = getProducts(message.component);
     }
-    return new Qualifier().qualify(getErrorMessages(message.description), message.component, message.component_version);
+    Map<String, String> productsVersions = getVersionsByProduct(products, versions);
+    return new Qualifier().qualify(getErrorMessages(message.description), productsVersions);
   }
 
   Set<String> getVersions(String message) {
     Set<String> res = new HashSet<>();
     Matcher matcher = VERSION_REGEX.matcher(message);
-    while(matcher.find()) {
+    while (matcher.find()) {
       res.add(matcher.group());
     }
     return res;
   }
 
   Set<String> getProducts(String message) {
-    UpdateCenter updateCenter = new UpdateCenter();
     Collection<String> knownProducts = updateCenter.findProducts();
     return knownProducts.stream()
       .filter(message::contains)
@@ -60,13 +75,28 @@ public class Analyzer {
 
     while (index > 0) {
       int at = message.indexOf("at ", index);
-      if(at < 0) {
+      if (at < 0) {
         break;
       }
-      res.add(message.substring(index, at+3));
+      res.add(message.substring(index, at + 3));
       index = message.indexOf("Caused by:", at);
     }
 
     return res;
   }
+
+  String getVersion(String product, Collection<String> versions) {
+    List<String> knownVersions = new ArrayList<>(updateCenter.findSortedVersions(product));
+    Collections.reverse(knownVersions);
+    return knownVersions.stream()
+      .filter(versions::contains)
+      .findFirst().orElse(null);
+  }
+
+  private Map<String, String> getVersionsByProduct(Set<String> products, Set<String> versions) {
+    return products.stream()
+      .collect(Collectors
+        .toMap(Function.identity(), p -> getVersion(p, versions)));
+  }
+
 }

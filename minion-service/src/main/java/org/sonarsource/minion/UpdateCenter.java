@@ -7,27 +7,29 @@ package org.sonarsource.minion;
 
 import java.io.IOException;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+import java.util.TreeSet;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static java.util.Arrays.stream;
 
 public class UpdateCenter {
 
-  private final Properties updateCenterProperties;
+  private static final String SONARQUBE_PRODUCT_KEY = "sonar";
 
-  private final Set<String> pluginKeys;
-  private final Set<String> pluginNames;
+  private final Properties updateCenterProperties;
+  private final Map<String, String> productKeysByName;
 
   public UpdateCenter() {
     this.updateCenterProperties = loadFile();
-    this.pluginKeys =
-      stream(this.updateCenterProperties.getProperty("plugins").split(","))
-      .collect(Collectors.toSet());
-    this.pluginNames = pluginKeys.stream().map(pluginKey -> updateCenterProperties.getProperty(pluginKey + ".name"))
-      .collect(Collectors.toSet());
-    this.pluginNames.add("SonarQube");
+    Set<String> pluginKeys = stream(this.updateCenterProperties.getProperty("plugins").split(",")).collect(Collectors.toSet());
+    this.productKeysByName = pluginKeys.stream()
+      .collect(Collectors.toMap(pluginKey -> updateCenterProperties.getProperty(pluginKey + ".name"), Function.identity()));
+    this.productKeysByName.put("SonarQube", SONARQUBE_PRODUCT_KEY);
   }
 
   private Properties loadFile() {
@@ -41,6 +43,16 @@ public class UpdateCenter {
   }
 
   public Collection<String> findProducts() {
-    return pluginNames;
+    return productKeysByName.keySet();
+  }
+
+  public Collection<String> findSortedVersions(String productName) {
+    String productKey = productKeysByName.get(productName);
+    if (productKey == null) {
+      return Collections.emptyList();
+    }
+    return stream(updateCenterProperties.getProperty(productKey + ".versions")
+      .split(","))
+        .collect(Collectors.toCollection(TreeSet::new));
   }
 }
