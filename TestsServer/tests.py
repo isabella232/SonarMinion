@@ -1,7 +1,5 @@
 import requests
 import unittest
-import os
-import simplejson as json
 
 def send_message(message):
 	#url = 'http://localhost:9001/analyze'
