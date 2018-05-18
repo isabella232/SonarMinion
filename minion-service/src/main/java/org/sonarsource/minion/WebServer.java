@@ -75,7 +75,7 @@ public class WebServer {
       }
 
       JsonObject post = new JsonParser().parse(payload).getAsJsonObject().get("post").getAsJsonObject();
-      String raw_post = post.get("cooked").getAsString();
+      String raw_post = post.get("cooked").getAsString().replace("\\n", "\n");
       return resultToString(analyzer.analyze(raw_post, "", "", ""));
     });
 
