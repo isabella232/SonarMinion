@@ -177,7 +177,7 @@ public class AnalyzerTest {
       if (expected.equals("report.txt")) {
         continue;
       }
-      String resp = analyzer.analyze(getContent(file)).getMessage();
+      Set<String> resp = analyzer.analyze(getContent(file)).getJiraTickets();
       softly.assertThat(resp).contains(expected);
     }
     softly.assertAll();
