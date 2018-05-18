@@ -65,6 +65,15 @@ public class WebServer {
       }
     });
 
+    post("/process_message", (request, response) -> {
+      String message = request.body();
+      if (message == null || message.trim().isEmpty()) {
+        throw new IllegalArgumentException("Body should not be empty");
+      } else {
+        return resultToString(analyzer.analyze(message, "", ""));
+      }
+    });
+
     exception(IllegalArgumentException.class, (e, req, res) -> {
       res.status(400);
       res.body(e.getMessage());
