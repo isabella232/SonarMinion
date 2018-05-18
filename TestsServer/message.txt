@@ -1,0 +1,21 @@
+Greetings!
+
+After 7.0-7.1 upgrade I have this issue (same thing with a new installation):
+
+Can't change default visibility of new projects to private (http://localhost:9071/admin/projects_management) .
+
+ When I try to do so, I get this:
+
+Unknown url : /api/organizations/update_project_visibility
+
+
+
+Here is a fragment of my web.log
+ 
+2018.05.03 17:45:47 TRACE web[AWMoKOrdx1wtnUJVAABZ][o.s.s.u.UserSessionFilter] Thread[http-nio-0.0.0.0-9071-exec-5,5,main] serves /api/organizations/update_project_visibility
+2018.05.03 17:45:47 TRACE web[AWMoKOrdx1wtnUJVAABZ][sql] time=1ms | sql=SELECT                   u.id as id,         u.login as login,         u.name as name,         u.email as email,         u.active as "active",         u.scm_accounts as "scmAccounts",         u.salt as "salt",         u.crypted_password as "cryptedPassword",         u.external_identity as "externalIdentity",         u.external_identity_provider as "externalIdentityProvider",         u.user_local as "local",         u.is_root as "root",         u.onboarded as "onboarded",         u.created_at as "createdAt",         u.updated_at as "updatedAt",         u.homepage_type as "homepageType",         u.homepage_parameter as "homepageParameter"               FROM users u         WHERE u.login=? AND u.active=true | params=admin
+2018.05.03 17:45:48 TRACE web[][sql] time=0ms | sql=select       uuid,     doc_type as docType,     doc_id as docId,     doc_id_type as docIdType,     doc_routing as docRouting,     created_at as createdAt         from es_queue     where     created_at <= ?     order by created_at desc     limit ? | params=1525387248533, 10000
+2018.05.03 17:46:00 TRACE web[][sql] time=0ms | sql=select id, data     from notifications     order by id asc     limit ? | params=1
+
+Thanks for your help
+Eddie
