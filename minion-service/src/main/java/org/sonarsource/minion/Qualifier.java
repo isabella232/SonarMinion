@@ -35,6 +35,17 @@ public class Qualifier {
     return jiraTickets;
   }
 
+  public Set<String> qualify(String message) {
+    String jql = "text ~\"" + escapeForJQL(message) + "\"";
+    Promise<SearchResult> searchResultPromise = jiraClient.getClient().getSearchClient().searchJql(jql);
+    SearchResult sr = searchResultPromise.claim();
+    Set<String> jiraTickets = new HashSet<>();
+    for (BasicIssue basicIssue : sr.getIssues()) {
+      jiraTickets.add(basicIssue.getKey());
+    }
+    return jiraTickets;
+  }
+
   private String escapeForJQL(String e) {
     return e.replace("\t", "\\t")
       .replace(":", "\\\\\\\\:")

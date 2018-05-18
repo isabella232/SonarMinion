@@ -64,7 +64,7 @@ public class Analyzer {
       throw new IllegalArgumentException("Invalid json message");
     }
     String description = message.description;
-    if (description == null) {
+    if (description == null || description.isEmpty()) {
       return processMessage(message);
     }
     List<String> errorMessages = getErrorMessages(description);
@@ -86,6 +86,10 @@ public class Analyzer {
   }
 
   private Result processMessage(Message message) {
+    String textMessage = message.message;
+    if (textMessage == null ||textMessage.isEmpty()) {
+      return new Result().setMessage("Please provide your error message");
+    }
     Set<String> versions = new HashSet<>();
     if (message.component_version == null || message.component_version.isEmpty()) {
       return new Result().setMessage("Seems like there is no product nor version in your question, could you clarify this information ?");
@@ -101,7 +105,7 @@ public class Analyzer {
     }
 
     Map<String, String> productsVersions = getVersionsByProduct(products, versions);
-    Set<String> jiraTickets = qualifier.qualify(null);
+    Set<String> jiraTickets = qualifier.qualify(textMessage);
     if (jiraTickets.isEmpty()) {
       return new Result().setMessage("No JIRA tickets has been found");
     }

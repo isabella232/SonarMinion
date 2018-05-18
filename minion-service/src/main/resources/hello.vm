@@ -9,8 +9,12 @@
           Which version of that component ?<br>
           <input id="component_version" name="component_version" value="v7.1"><br>
 
-          Any specific error or stacktrace ?<br>
+          Any specific stacktrace ?<br>
           <textarea name="description" id="description" rows="20" cols="120">Paste your stacktrace here</textarea><br>
+
+          Any specific error message ?<br>
+          <textarea name="message" id="message" rows="10" cols="120">Paste your error message here</textarea><br>
+
           <button type="submit">Can you find something dear minion ?</button>
         </form>
     </center>
