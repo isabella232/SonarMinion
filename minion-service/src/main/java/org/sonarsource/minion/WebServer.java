@@ -53,16 +53,17 @@ public class WebServer {
       String description = request.queryParams("description");
       String component = request.queryParams("component");
       String component_version = request.queryParams("component_version");
+      String message = request.queryParams("message");
 
       if (description != null && !description.isEmpty()) {
-        return resultToString(analyzer.analyze(description, component, component_version));
+        return resultToString(analyzer.analyze(description, component, component_version, message));
       }
 
-      String message = request.body();
-      if (message == null || message.trim().isEmpty()) {
+      String body = request.body();
+      if (body == null || body.trim().isEmpty()) {
         throw new IllegalArgumentException("Body should not be empty");
       } else {
-        return resultToString(analyzer.analyze(message));
+        return resultToString(analyzer.analyze(body));
       }
     });
 

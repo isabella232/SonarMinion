@@ -56,7 +56,7 @@ public class SonarJavaIntegrationTest {
       for (Version v  : issue.getFixVersions()) {
         versions.add(v.getName());
       }
-      Analyzer.Message message = new Analyzer.Message(desc, "SonarJava", versions.stream().collect(Collectors.joining(",")));
+      Analyzer.Message message = new Analyzer.Message(desc, "SonarJava", versions.stream().collect(Collectors.joining(",")), null);
 
       Files.write(new File("src/test/resources/javaTickets/"+issue.getKey()).toPath(), gson.toJson(message).getBytes());
     }

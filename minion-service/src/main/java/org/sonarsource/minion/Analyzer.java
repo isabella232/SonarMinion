@@ -39,11 +39,13 @@ public class Analyzer {
     String description;
     String component;
     String component_version;
+    String message;
 
-    public Message(String description, String component, String component_version) {
+    public Message(String description, String component, String component_version, String message) {
       this.description = description;
       this.component = component;
       this.component_version = component_version;
+      this.message = message;
     }
   }
 
@@ -53,49 +55,60 @@ public class Analyzer {
     return this.process(message);
   }
 
-  public Result analyze(String description, String component, String component_version) {
-    return this.process(new Message(description, component, component_version));
+  public Result analyze(String description, String component, String component_version, String message) {
+    return this.process(new Message(description, component, component_version, message));
   }
 
   public Result process(Message message) {
     if (message == null) {
       throw new IllegalArgumentException("Invalid json message");
     }
+    String description = message.description;
+    if (description == null) {
+      return processMessage(message);
+    }
+    List<String> errorMessages = getErrorMessages(description);
+    return processError(errorMessages);
+  }
+
+  private Result processError(List<String> errorMessages) {
+    if (errorMessages.isEmpty()) {
+      return new Result().setMessage("We didn't understand the error, could you please describe the error ?");
+    }
+    Set<String> jiraTickets = qualifier.qualify(new HashSet<>(errorMessages));
+    if (jiraTickets.isEmpty()) {
+      return new Result().setMessage("No JIRA tickets has been found");
+    }
+
+    return new Result()
+      .setJiraTickets(jiraTickets)
+      .setErrorMessages(errorMessages);
+  }
+
+  private Result processMessage(Message message) {
     Set<String> versions = new HashSet<>();
     if (message.component_version == null || message.component_version.isEmpty()) {
-      versions = getVersions(message.description);
-      if (versions.isEmpty()) {
-        return new Result().setMessage("Seems like there is no product nor version in your question, could you clarify this information ?");
-      }
+      return new Result().setMessage("Seems like there is no product nor version in your question, could you clarify this information ?");
     } else {
       versions.add(message.component_version);
     }
 
     Set<String> products = new HashSet<>();
     if (message.component == null || message.component.isEmpty()) {
-      products = getProducts(message.description);
+      return new Result().setMessage("Could you specify which component of the SonarQube ecosystem your question is about ?");
     } else {
       products = getProducts(message.component);
     }
-    if (products.isEmpty()) {
-      return new Result().setMessage("Could you specify which component of the SonarQube ecosystem your question is about ?");
-    }
 
     Map<String, String> productsVersions = getVersionsByProduct(products, versions);
-    List<String> errorMessages = getErrorMessages(message.description);
-    if (errorMessages.isEmpty()) {
-      return new Result().setMessage("We didn't understand the error, could you please describe the error ?");
-    }
-    Set<String> jiraTickets = qualifier.qualify(new HashSet<>(errorMessages), productsVersions);
+    Set<String> jiraTickets = qualifier.qualify(null);
     if (jiraTickets.isEmpty()) {
       return new Result().setMessage("No JIRA tickets has been found");
     }
 
-    Result result = new Result()
+    return new Result()
       .setJiraTickets(jiraTickets)
-      .setProductsVersions(productsVersions)
-      .setErrorMessages(errorMessages);
-    return result;
+      .setProductsVersions(productsVersions);
   }
 
   Set<String> getVersions(String message) {

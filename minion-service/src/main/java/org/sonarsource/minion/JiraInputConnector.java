@@ -7,12 +7,7 @@
 package org.sonarsource.minion;
 
 import com.atlassian.jira.rest.client.JiraRestClient;
-import com.atlassian.jira.rest.client.JiraRestClientFactory;
-import com.atlassian.jira.rest.client.auth.AnonymousAuthenticationHandler;
 import com.atlassian.jira.rest.client.domain.Version;
-import com.atlassian.jira.rest.client.internal.async.AsynchronousJiraRestClientFactory;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
@@ -26,18 +21,17 @@ public class JiraInputConnector implements InputConnector {
 
   private static final String JIRA_URL = "https://jira.sonarsource.com";
 
+  private final JiraClient jiraClient;
+
   private Map<String, Project> projectsByName;
 
-  public JiraInputConnector() {
-    JiraRestClientFactory factory = new AsynchronousJiraRestClientFactory();
-    URI uri = null;
-    try {
-      uri = new URI(JIRA_URL);
-    } catch (URISyntaxException e) {
-      throw new IllegalStateException("Jira from sonarsource not found !?");
-    }
-    JiraRestClient client = factory.create(uri, new AnonymousAuthenticationHandler());
+  public JiraInputConnector(JiraClient jiraClient) {
+    this.jiraClient = jiraClient;
+  }
 
+  public JiraInputConnector() {
+    this(new JiraClient());
+    JiraRestClient client = jiraClient.getClient();
     this.projectsByName = StreamSupport.stream(client.getProjectClient().getAllProjects().claim().spliterator(), false)
       .map(p -> client.getProjectClient().getProject(p.getKey()).claim())
       .map(p -> new Project(p.getKey(), p.getName(),

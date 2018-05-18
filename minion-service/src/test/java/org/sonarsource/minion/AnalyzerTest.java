@@ -10,10 +10,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.assertj.core.api.SoftAssertions;
@@ -33,14 +31,14 @@ public class AnalyzerTest {
   @Test
   public void test_returned_message() {
     String answer = analyzer.analyze("{description:\"foo\"}").getMessage();
-    assertThat(answer).isEqualTo("Seems like there is no product nor version in your question, could you clarify this information ?");
+    assertThat(answer).isEqualTo("We didn't understand the error, could you please describe the error ?");
 
     // version in message
     answer = analyzer.analyze("{description:\"foo 6.2\"}").getMessage();
-    assertThat(answer).isEqualTo("Could you specify which component of the SonarQube ecosystem your question is about ?");
+    assertThat(answer).isEqualTo("We didn't understand the error, could you please describe the error ?");
 
     answer = analyzer.analyze("{description:\"foo 6.2\", component:\"plop\"}").getMessage();
-    assertThat(answer).isEqualTo("Could you specify which component of the SonarQube ecosystem your question is about ?");
+    assertThat(answer).isEqualTo("We didn't understand the error, could you please describe the error ?");
   }
 
   @Test
@@ -151,7 +149,7 @@ public class AnalyzerTest {
       }
       expected = expected.substring(0, expected.length() - 4);
 
-      Set<String> resp = qualifier.qualify(new HashSet<>(errorMessages), new HashMap<>());
+      Set<String> resp = qualifier.qualify(new HashSet<>(errorMessages));
       softly.assertThat(resp).contains(expected);
     }
     softly.assertAll();
@@ -185,7 +183,7 @@ public class AnalyzerTest {
 
   private static final class FakeQualifier extends Qualifier {
     @Override
-    public Set<String> qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
+    public Set<String> qualify(Set<String> errorMessage) {
       return Collections.emptySet();
     }
   }
