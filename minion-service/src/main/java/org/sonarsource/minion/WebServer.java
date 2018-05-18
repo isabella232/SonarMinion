@@ -91,7 +91,7 @@ public class WebServer {
       return result.getMessage();
     } else {
       StringBuilder s = new StringBuilder();
-      s.append("JIRA tickets found : " + result.getJiraTickets().stream().collect(Collectors.joining("<br/>")));
+      s.append("JIRA tickets found : " + result.getJiraTickets().stream().map(t -> "<a href=\"https://jira.sonarsource.com/browse/"+t+"\">"+t+"</a>").collect(Collectors.joining("<br/>")));
       s.append("<br/>");
       s.append("Products found : " + result.getProductsVersions().entrySet().stream().map(entry -> entry.getKey() + " - " + entry.getValue()).collect(Collectors.joining("<br/>")));
       s.append("<br/>");
