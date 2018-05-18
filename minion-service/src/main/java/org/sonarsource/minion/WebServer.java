@@ -9,9 +9,15 @@ package org.sonarsource.minion;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
+import okhttp3.MultipartBody;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import spark.ModelAndView;
@@ -70,13 +76,33 @@ public class WebServer {
 
     post("/process_message", (request, response) -> {
       String payload = request.body();
-      if (payload == null || payload .trim().isEmpty()) {
+      if (payload == null || payload.trim().isEmpty()) {
         throw new IllegalArgumentException("Body should not be empty");
       }
 
       JsonObject post = new JsonParser().parse(payload).getAsJsonObject().get("post").getAsJsonObject();
       String raw_post = post.get("cooked").getAsString().replace("\\n", "\n");
-      return resultToString(analyzer.analyze(raw_post, "", "", ""));
+      String topic = post.get("topic_id").getAsString();
+
+      RequestBody requestBody = new MultipartBody.Builder()
+        .setType(MultipartBody.FORM)
+        .addFormDataPart("raw", raw_post)
+        .addFormDataPart("api_key", "9a46bc00a8fa01aad641a092fd972521885092f69df58ced7845d27294902b5c")
+        .addFormDataPart("topic_id", "75")
+        .build();
+      OkHttpClient client = new OkHttpClient();
+      Request request1 = new Request.Builder()
+        .post(requestBody)
+        .url("https://community.sonarsource.org/posts?&raw=" + resultToString(analyzer.analyze(raw_post, "", "", ""))
+          + "&api_key=9a46bc00a8fa01aad641a092fd972521885092f69df58ced7845d27294902b5c&topic_id=" + topic)
+        .build();
+      try {
+        Response response1 = client.newCall(request1).execute();
+        System.out.println(response1.message());
+      } catch (IOException e) {
+        throw new IllegalStateException("Error", e);
+      }
+      return "200";
     });
 
     exception(IllegalArgumentException.class, (e, req, res) -> {
