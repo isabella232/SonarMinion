@@ -17,9 +17,7 @@ public class JiraClient {
 
   private static final String JIRA_URL = "https://jira.sonarsource.com";
 
-  private final JiraRestClient client;
-
-  public JiraClient() {
+  public JiraRestClient getClient() {
     JiraRestClientFactory factory = new AsynchronousJiraRestClientFactory();
     URI uri = null;
     try {
@@ -27,10 +25,6 @@ public class JiraClient {
     } catch (URISyntaxException e) {
       throw new IllegalStateException("Jira from sonarsource not found !?");
     }
-    this.client = factory.create(uri, new AnonymousAuthenticationHandler());
-  }
-
-  public JiraRestClient getClient() {
-    return client;
+    return factory.create(uri, new AnonymousAuthenticationHandler());
   }
 }
