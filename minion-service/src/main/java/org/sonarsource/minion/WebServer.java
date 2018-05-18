@@ -6,7 +6,8 @@
 
 package org.sonarsource.minion;
 
-import com.google.gson.JsonSyntaxException;
+import com.google.gson.*;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -66,12 +67,14 @@ public class WebServer {
     });
 
     post("/process_message", (request, response) -> {
-      String message = request.body();
-      if (message == null || message.trim().isEmpty()) {
+      String payload = request.body();
+      if (payload == null || payload .trim().isEmpty()) {
         throw new IllegalArgumentException("Body should not be empty");
-      } else {
-        return resultToString(analyzer.analyze(message, "", ""));
       }
+
+      JsonObject post = new JsonParser().parse(payload).getAsJsonObject().get("post").getAsJsonObject();
+      String raw_post = post.get("cooked").getAsString();
+      return resultToString(analyzer.analyze(raw_post, "", ""));
     });
 
     exception(IllegalArgumentException.class, (e, req, res) -> {
