@@ -6,7 +6,7 @@ SonarMinion
 `curl -d '{"description":foo, "component":"SonarQube", "component_version":"v1"}' "https://sonar-minion.herokuapp.com/analyze"`
 
 
-Execution des tests de reponse du serveur:
+Tests of the server responses:
 
 requirements:
 - python 2.7
@@ -15,5 +15,9 @@ requirements:
 
 > pip install unittest
 
+> pip install selenium
+
+Download geckodriver binary from https://github.com/mozilla/geckodriver/releases and put it somewhere in the PATH
+
 depuis le repertoire TestsServer:
-> python -m tests -vvv
+> python -m testminion -vvv
