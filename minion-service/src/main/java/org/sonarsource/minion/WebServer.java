@@ -77,15 +77,18 @@ public class WebServer {
   }
 
   public String resultToString(Analyzer.Result result) {
-    StringBuilder s = new StringBuilder();
-    s.append(result.getMessage());
-    s.append("<br/>");
-    s.append("JIRA tickets found : " + result.getJiraTickets().stream().collect(Collectors.joining("<br/>")));
-    s.append("<br/>");
-    s.append("Products found : " + result.getProductsVersions().entrySet().stream().map(entry -> entry.getKey() + " - " + entry.getValue()).collect(Collectors.joining("<br/>")));
-    s.append("<br/>");
-    s.append("Errors found : " + result.getErrorMessages().stream().collect(Collectors.joining("<br/>")));
-    return s.toString();
+    String message = result.getMessage();
+    if (message != null) {
+      return result.getMessage();
+    } else {
+      StringBuilder s = new StringBuilder();
+      s.append("JIRA tickets found : " + result.getJiraTickets().stream().collect(Collectors.joining("<br/>")));
+      s.append("<br/>");
+      s.append("Products found : " + result.getProductsVersions().entrySet().stream().map(entry -> entry.getKey() + " - " + entry.getValue()).collect(Collectors.joining("<br/>")));
+      s.append("<br/>");
+      s.append("Errors found : " + result.getErrorMessages().stream().collect(Collectors.joining("<br/>")));
+      return s.toString();
+    }
   }
 
   public static void main(String[] args) {

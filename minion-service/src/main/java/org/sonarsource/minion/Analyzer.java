@@ -10,6 +10,7 @@ import com.google.gson.GsonBuilder;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -150,9 +151,9 @@ public class Analyzer {
 
   static class Result {
     private String message;
-    private Set<String> jiraTickets;
-    private Map<String, String> productsVersions;
-    private List<String> errorMessages;
+    private Set<String> jiraTickets = new HashSet<>();
+    private Map<String, String> productsVersions = new HashMap<>();
+    private List<String> errorMessages = new ArrayList<>();
 
     public String getMessage() {
       return message;
