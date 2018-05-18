@@ -24,7 +24,7 @@ import javax.annotation.CheckForNull;
 
 public class Analyzer {
   private static final Pattern VERSION_REGEX = Pattern.compile("\\d+\\.\\d+(\\.\\d+)*");
-  private static final Pattern STACK_REGEX= Pattern.compile("(^\\d+\\) .+)|(^.+Exception: .+)|(^\\s+at .+)|(^\\s+... \\d+ more)|(^\\s*Caused by:.+)", Pattern.MULTILINE);
+  private static final Pattern STACK_REGEX = Pattern.compile("(^\\d+\\) .+)|(^.+Exception: .+)|(^\\s+at .+)|(^\\s+... \\d+ more)|(^\\s*Caused by:.+)", Pattern.MULTILINE);
   private final Qualifier qualifier;
 
   private InputConnector inputConnector;
@@ -46,18 +46,17 @@ public class Analyzer {
     }
   }
 
-
-  public String analyze(String json) {
+  public Result analyze(String json) {
     Gson gson = new GsonBuilder().create();
     Message message = gson.fromJson(json, Message.class);
     return this.process(message);
   }
 
-  public String analyze(String description, String component, String component_version) {
+  public Result analyze(String description, String component, String component_version) {
     return this.process(new Message(description, component, component_version));
   }
 
-  public String process(Message message) {
+  public Result process(Message message) {
     if (message == null) {
       throw new IllegalArgumentException("Invalid json message");
     }
@@ -65,7 +64,7 @@ public class Analyzer {
     if (message.component_version == null || message.component_version.isEmpty()) {
       versions = getVersions(message.description);
       if (versions.isEmpty()) {
-        return "Seems like there is no product nor version in your question, could you clarify this information ?";
+        return new Result().setMessage("Seems like there is no product nor version in your question, could you clarify this information ?");
       }
     } else {
       versions.add(message.component_version);
@@ -78,15 +77,24 @@ public class Analyzer {
       products = getProducts(message.component);
     }
     if (products.isEmpty()) {
-      return "Could you specify which component of the SonarQube ecosystem your question is about ?";
+      return new Result().setMessage("Could you specify which component of the SonarQube ecosystem your question is about ?");
     }
 
     Map<String, String> productsVersions = getVersionsByProduct(products, versions);
     List<String> errorMessages = getErrorMessages(message.description);
     if (errorMessages.isEmpty()) {
-      return "We didn't understand the error, could you please describe the error ?";
+      return new Result().setMessage("We didn't understand the error, could you please describe the error ?");
     }
-    return qualifier.qualify(new HashSet<>(errorMessages), productsVersions);
+    Set<String> jiraTickets = qualifier.qualify(new HashSet<>(errorMessages), productsVersions);
+    if (jiraTickets.isEmpty()) {
+      return new Result().setMessage("No JIRA tickets has been found");
+    }
+
+    Result result = new Result()
+      .setJiraTickets(jiraTickets)
+      .setProductsVersions(productsVersions)
+      .setErrorMessages(errorMessages);
+    return result;
   }
 
   Set<String> getVersions(String message) {
@@ -113,7 +121,7 @@ public class Analyzer {
     }
     return IntStream.range(0, res.size())
       // keep the first element in case we dd
-      .filter(i -> i==0 || res.get(i).matches("(^.+Exception: .+)|(^\\s*Caused by:.+)"))
+      .filter(i -> i == 0 || res.get(i).matches("(^.+Exception: .+)|(^\\s*Caused by:.+)"))
       .mapToObj(i -> {
         int next = i + 1;
         String line = null;
@@ -140,4 +148,46 @@ public class Analyzer {
       .collect(Collectors.toMap(Function.identity(), p -> getVersion(p, versions)));
   }
 
+  static class Result {
+    private String message;
+    private Set<String> jiraTickets;
+    private Map<String, String> productsVersions;
+    private List<String> errorMessages;
+
+    public String getMessage() {
+      return message;
+    }
+
+    public Result setMessage(String message) {
+      this.message = message;
+      return this;
+    }
+
+    public Set<String> getJiraTickets() {
+      return jiraTickets;
+    }
+
+    public Result setJiraTickets(Set<String> jiraTickets) {
+      this.jiraTickets = jiraTickets;
+      return this;
+    }
+
+    public Map<String, String> getProductsVersions() {
+      return productsVersions;
+    }
+
+    public Result setProductsVersions(Map<String, String> productsVersions) {
+      this.productsVersions = productsVersions;
+      return this;
+    }
+
+    public List<String> getErrorMessages() {
+      return errorMessages;
+    }
+
+    public Result setErrorMessages(List<String> errorMessages) {
+      this.errorMessages = errorMessages;
+      return this;
+    }
+  }
 }

@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -31,14 +32,14 @@ public class AnalyzerTest {
 
   @Test
   public void test_returned_message() {
-    String answer = analyzer.analyze("{description:\"foo\"}");
+    String answer = analyzer.analyze("{description:\"foo\"}").getMessage();
     assertThat(answer).isEqualTo("Seems like there is no product nor version in your question, could you clarify this information ?");
 
     // version in message
-    answer = analyzer.analyze("{description:\"foo 6.2\"}");
+    answer = analyzer.analyze("{description:\"foo 6.2\"}").getMessage();
     assertThat(answer).isEqualTo("Could you specify which component of the SonarQube ecosystem your question is about ?");
 
-    answer = analyzer.analyze("{description:\"foo 6.2\", component:\"plop\"}");
+    answer = analyzer.analyze("{description:\"foo 6.2\", component:\"plop\"}").getMessage();
     assertThat(answer).isEqualTo("Could you specify which component of the SonarQube ecosystem your question is about ?");
   }
 
@@ -143,13 +144,14 @@ public class AnalyzerTest {
     Qualifier qualifier = new Qualifier();
     for (File file : new File("src/test/resources/stacktraces").listFiles()) {
       List<String> errorMessages = analyzer.getErrorMessages(getContent(file));
-      String resp = qualifier.qualify(new HashSet<>(errorMessages), new HashMap<>());
       String expected = file.getName();
       if ("SONAR-10536.txt".equals(expected)) {
         // not supported yet : stack trace is rather incomplete
         continue;
       }
       expected = expected.substring(0, expected.length() - 4);
+
+      Set<String> resp = qualifier.qualify(new HashSet<>(errorMessages), new HashMap<>());
       softly.assertThat(resp).contains(expected);
     }
     softly.assertAll();
@@ -160,9 +162,9 @@ public class AnalyzerTest {
     File file = new File("src/test/resources/servicedesk/input1.json");
     Analyzer analyzer = new Analyzer(new Qualifier(), new CachedJiraInputConnector());
 
-    String message = analyzer.analyze(getContent(file));
+    Set<String> tickets = analyzer.analyze(getContent(file)).getJiraTickets();
 
-    assertThat(message).contains("SONAR-9384");
+    assertThat(tickets).contains("SONAR-9384");
   }
 
   @Test
@@ -175,7 +177,7 @@ public class AnalyzerTest {
       if (expected.equals("report.txt")) {
         continue;
       }
-      String resp = analyzer.analyze(getContent(file));
+      String resp = analyzer.analyze(getContent(file)).getMessage();
       softly.assertThat(resp).contains(expected);
     }
     softly.assertAll();
@@ -183,8 +185,8 @@ public class AnalyzerTest {
 
   private static final class FakeQualifier extends Qualifier {
     @Override
-    public String qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
-      return "Your question seems related to SONAR-42";
+    public Set<String> qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
+      return Collections.emptySet();
     }
   }
 

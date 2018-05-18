@@ -7,8 +7,13 @@
 package org.sonarsource.minion;
 
 import com.google.gson.JsonSyntaxException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import spark.ModelAndView;
+import spark.template.velocity.VelocityTemplateEngine;
 
 import static spark.Spark.exception;
 import static spark.Spark.get;
@@ -17,23 +22,15 @@ import static spark.Spark.post;
 import static spark.Spark.redirect;
 import static spark.Spark.staticFiles;
 
-import spark.ModelAndView;
-import spark.template.velocity.VelocityTemplateEngine;
-
-import java.util.HashMap;
-import java.util.Map;
-
-
 public class WebServer {
 
   private static final int DEFAULT_PORT = 9001;
 
   private static final Logger LOGGER = LoggerFactory.getLogger(WebServer.class);
 
-  private final JiraInputConnector jiraInputConnector = new JiraInputConnector();
+  private final InputConnector jiraInputConnector = new CachedJiraInputConnector();
   private final Qualifier qualifier = new Qualifier();
   private final Analyzer analyzer = new Analyzer(qualifier, jiraInputConnector);
-
 
   public void start(int port) {
     port(port);
@@ -41,33 +38,30 @@ public class WebServer {
 
     staticFiles.location("img");
 
-      get("/", (request, response) -> {
-          Map<String, Object> model = new HashMap<>();
-          model.put("message", "Velocity World");
+    get("/", (request, response) -> {
+      Map<String, Object> model = new HashMap<>();
+      model.put("message", "Velocity World");
 
-          // The vm files are located under the resources directory
-          return new ModelAndView(model, "hello.vm");
-      }, new VelocityTemplateEngine());
-
+      // The vm files are located under the resources directory
+      return new ModelAndView(model, "hello.vm");
+    }, new VelocityTemplateEngine());
 
     redirect.get("*", "/minion.png");
-
 
     post("/analyze", (request, response) -> {
       String description = request.queryParams("description");
       String component = request.queryParams("component");
       String component_version = request.queryParams("component_version");
 
-      if (description !=null && !description.isEmpty()){
-        return analyzer.analyze(description, component, component_version);
+      if (description != null && !description.isEmpty()) {
+        return resultToString(analyzer.analyze(description, component, component_version));
       }
 
       String message = request.body();
       if (message == null || message.trim().isEmpty()) {
         throw new IllegalArgumentException("Body should not be empty");
-      }
-      else {
-        return analyzer.analyze(message);
+      } else {
+        return resultToString(analyzer.analyze(message));
       }
     });
 
@@ -80,6 +74,18 @@ public class WebServer {
       res.status(400);
       res.body(e.getMessage());
     });
+  }
+
+  public String resultToString(Analyzer.Result result) {
+    StringBuilder s = new StringBuilder();
+    s.append(result.getMessage());
+    s.append("<br/>");
+    s.append("JIRA tickets found : " + result.getJiraTickets().stream().collect(Collectors.joining("<br/>")));
+    s.append("<br/>");
+    s.append("Products found : " + result.getProductsVersions().entrySet().stream().map(entry -> entry.getKey() + " - " + entry.getValue()).collect(Collectors.joining("<br/>")));
+    s.append("<br/>");
+    s.append("Errors found : " + result.getErrorMessages().stream().collect(Collectors.joining("<br/>")));
+    return s.toString();
   }
 
   public static void main(String[] args) {

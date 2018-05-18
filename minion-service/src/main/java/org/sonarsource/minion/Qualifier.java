@@ -14,6 +14,7 @@ import com.atlassian.jira.rest.client.internal.async.AsynchronousJiraRestClientF
 import com.atlassian.util.concurrent.Promise;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -35,23 +36,15 @@ public class Qualifier {
     this.client = factory.create(uri, new AnonymousAuthenticationHandler());
   }
 
-  public String qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
+  public Set<String> qualify(Set<String> errorMessage, Map<String, String> productsVersions) {
     String jql = errorMessage.stream().map(e -> "text ~\"" + escapeForJQL(e) + "\"").collect(Collectors.joining(" OR "));
     Promise<SearchResult> searchResultPromise = client.getSearchClient().searchJql(jql);
     SearchResult sr = searchResultPromise.claim();
-    StringBuilder result = new StringBuilder();
+    Set<String> jiraTickets = new HashSet<>();
     for (BasicIssue basicIssue : sr.getIssues()) {
-      result.append(basicIssue.getKey()).append(", ");
+      jiraTickets.add(basicIssue.getKey());
     }
-    if (result.length() == 0) {
-      return "Your question seems related to SONAR-42";
-    }
-
-    result.append("\n");
-    result.append("Products found : " + productsVersions.entrySet().stream().map(entry -> entry.getKey() + " - " + entry.getValue()).collect(Collectors.joining(",")));
-    result.append("\n");
-    result.append("Errors found : " + errorMessage.stream().collect(Collectors.joining(",")));
-    return result.toString();
+    return jiraTickets;
   }
 
   private String escapeForJQL(String e) {
