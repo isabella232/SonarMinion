@@ -16,6 +16,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 import org.assertj.core.api.SoftAssertions;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static java.util.Arrays.asList;
@@ -162,6 +163,22 @@ public class AnalyzerTest {
     String message = analyzer.analyze(getContent(file));
 
     assertThat(message).contains("SONAR-9384");
+  }
+
+  @Test
+  @Ignore
+  public void test_SonarJava_tickets() throws IOException {
+    Analyzer analyzer = new Analyzer(new Qualifier(), new CachedJiraInputConnector());
+    SoftAssertions softly = new SoftAssertions();
+    for (File file : new File("src/test/resources/javaTickets").listFiles()) {
+      String expected = file.getName();
+      if (expected.equals("report.txt")) {
+        continue;
+      }
+      String resp = analyzer.analyze(getContent(file));
+      softly.assertThat(resp).contains(expected);
+    }
+    softly.assertAll();
   }
 
   private static final class FakeQualifier extends Qualifier {

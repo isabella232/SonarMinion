@@ -22,7 +22,7 @@ public class SonarJavaIntegrationTest {
 
 //  @Test
   public void read_java_tickets() throws IOException {
-    Analyzer analyzer = new Analyzer(new Qualifier(), new JiraInputConnector());
+    Analyzer analyzer = new Analyzer(new Qualifier(), new CachedJiraInputConnector());
     StringBuilder sb = new StringBuilder();
     for (File javaFile : new File("src/test/resources/javaTickets").listFiles()) {
       String content = new String(Files.readAllBytes(javaFile.toPath()));
