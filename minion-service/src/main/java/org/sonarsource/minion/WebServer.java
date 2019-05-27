@@ -87,14 +87,15 @@ public class WebServer {
       RequestBody requestBody = new MultipartBody.Builder()
         .setType(MultipartBody.FORM)
         .addFormDataPart("raw", raw_post)
-        .addFormDataPart("api_key", "9a46bc00a8fa01aad641a092fd972521885092f69df58ced7845d27294902b5c")
+        // TODO set API key from external files
+        .addFormDataPart("api_key", "TO_BE_SET")
         .addFormDataPart("topic_id", "75")
         .build();
       OkHttpClient client = new OkHttpClient();
       Request request1 = new Request.Builder()
         .post(requestBody)
         .url("https://community.sonarsource.org/posts?&raw=" + resultToString(analyzer.analyze(raw_post, "", "", ""))
-          + "&api_key=9a46bc00a8fa01aad641a092fd972521885092f69df58ced7845d27294902b5c&topic_id=" + topic)
+          + "&api_key=TO_BE_SET&topic_id=" + topic)
         .build();
       try {
         Response response1 = client.newCall(request1).execute();
